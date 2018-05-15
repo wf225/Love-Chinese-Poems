@@ -1,5 +1,10 @@
 # 天乐学古诗
-### Ref: [小学生必备古诗80首](https://baike.baidu.com/item/小学生必备古诗80首?fromtitle=小学古诗&fromid=16179688)
+
+![Mou icon](images/爱上古诗.jpg)
+
+> [TODO：学习进度](#======-TODO-======)
+
+> [小学生必备古诗80首](https://baike.baidu.com/item/小学生必备古诗80首?fromtitle=小学古诗&fromid=16179688)
 
 ## 山村咏怀
 #### 北宋 - 邵康节（邵雍）
