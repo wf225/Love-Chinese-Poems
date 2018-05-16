@@ -1,6 +1,6 @@
 # 天乐学古诗
 
-![Mou icon](images/爱上古诗.jpg)
+![天乐学古诗](images/爱上古诗.jpg)
 
 > [TODO：学习进度](#======TODO======)
 
