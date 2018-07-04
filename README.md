@@ -2,7 +2,7 @@
 
 ![天乐学古诗](images/爱上古诗.jpg)
 
-> [TODO：学习进度](#TODO-List)
+> [TODO：学习进度](#todo-list)
 
 > [小学生必备古诗80首](https://baike.baidu.com/item/小学生必备古诗80首?fromtitle=小学古诗&fromid=16179688)
 
