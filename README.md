@@ -2,7 +2,7 @@
 
 ![天乐学古诗](images/爱上古诗.jpg)
 
-> [TODO：学习进度](#======TODO======)
+> [TODO：学习进度](#TODO-List)
 
 > [小学生必备古诗80首](https://baike.baidu.com/item/小学生必备古诗80首?fromtitle=小学古诗&fromid=16179688)
 
@@ -452,7 +452,8 @@
 周公吐哺，天下归心。
 ```
 
-# ======TODO======
+# TODO-List
+# ============
 
 ## [古朗月行](https://baike.baidu.com/item/古朗月行)
 #### 唐 - 李白
