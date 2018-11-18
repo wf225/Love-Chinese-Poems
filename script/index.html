@@ -24,16 +24,34 @@
   </p>
 
   <script>
+    let indexArr = Array();
+
     function getPoem() {
       var url = "/get_poem"
       axios.get(url).then(function (response) {
         var jsonObject = response.data;
-        // var jsonString = JSON.stringify(jsonObject)
-        // document.getElementById("hero").innerHTML = jsonString;
-        document.getElementById("topic").innerHTML = jsonObject.topic;
-        document.getElementById("answer").innerHTML = jsonObject.answer;
-        document.getElementById("poem").innerHTML = JSON.stringify(jsonObject.poem);
+
+        if (indexArr.indexOf(jsonObject.index) > -1) {
+          // 重复题目，重新抽取
+          console.warn(`重复题目: ${jsonObject.index} ${jsonObject.topic}`);
+          axios.get(url).then(function (response2) {
+            var jsonObject2 = response2.data;
+            console.warn(`重新抽取: ${jsonObject2.index} ${jsonObject2.topic}`);
+
+            indexArr.push(jsonObject.index);
+            setHtml(jsonObject2);
+          });
+        } else {
+          indexArr.push(jsonObject.index);
+          setHtml(jsonObject);
+        }
       })
+    }
+
+    function setHtml(jsonObject) {
+      document.getElementById("topic").innerHTML = jsonObject.topic;
+      document.getElementById("answer").innerHTML = jsonObject.answer;
+      document.getElementById("poem").innerHTML = JSON.stringify(jsonObject.poem);
     }
   </script>
 

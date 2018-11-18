@@ -16,6 +16,11 @@ function getPoems() {
   for (i = 0; i < dataArr.length; i++) {
     const lineData = dataArr[i];
 
+    // 过滤没学过的
+    if (lineData === "### TODO-List") {
+      break;
+    }
+
     if (lineData.substr(0, 3) == "## ") {
       poem = {
         title: "",
@@ -58,7 +63,7 @@ function getPoem(lineData, poem) {
     return;
   }
 
-  // 读取内容开始标识
+  // 内容开始标识
   if (!poem.isStart && lineData.substr(0, 3) === "```") {
     poem.isStart = true;
     return;
@@ -66,11 +71,11 @@ function getPoem(lineData, poem) {
 
   // 读取内容正文
   if (poem.isStart && lineData.substr(0, 3) !== "```") {
-    poem.content += lineData + "\n";
+    poem.content += lineData + "\n"; // 给每句结尾加上换行符
     return;
   }
 
-  // 读取内容结束标识
+  // 内容结束标识
   if (!poem.isEnd && lineData.substr(0, 3) === "```") {
     poem.isEnd = true;
     poem.content = poem.content.substr(0, poem.content.length - 1);
@@ -103,46 +108,50 @@ function getTopic() {
   const poems = getPoems();
 
   // 随机抽取一首诗
-  let num = getRandomNum(0, poems.length);
-  const poem = poems[num];
+  let num1 = getRandomNum(0, poems.length);
+  const poem = poems[num1];
 
   let contentArr = poem.content.split("\n");
   console.log(contentArr);
 
   // 随机抽取诗中的一行
   let num2 = getRandomNum(0, contentArr.length - 1);
-  content = contentArr[num2];
-  if (content === "") {
+  let lineContent = contentArr[num2];
+  if (lineContent === "") {
     num2 = num2 - 1;
-    content = contentArr[num2];
+    lineContent = contentArr[num2];
   }
   console.log("num2: " + num2);
-  console.log(content);
+  console.log(lineContent);
 
   // 随机抽取诗中的一句
-  let lineArr = content.split("。"); // [ '人闲桂花落，夜静春山空', '' ]
-  console.log(lineArr);
-  let num3 = getRandomNum(0, lineArr.length - 2); // 去掉最后一个为空的 item
+  let sentenceArr = lineContent.split("。"); // [ '人闲桂花落，夜静春山空', '' ]
+  console.log(sentenceArr);
+  let num3 = getRandomNum(0, sentenceArr.length - 2); // 去掉最后一个为空的 item
   console.log("num3: " + num3);
-  let lineStr = lineArr[num3];
+  let sentence = sentenceArr[num3];
 
   // 随机抽取诗中的半句
-  let sentenceArr = lineStr.split("，");
-  let num4 = getRandomNum(0, sentenceArr.length - 1);
-  let sentence = sentenceArr[num4];
-  console.log(sentenceArr);
+  let topicArr = sentence.split("，");
+  let num4 = getRandomNum(0, topicArr.length - 1);
+  let topic = topicArr[num4];
+  console.log(topicArr);
   console.log("num4: " + num4);
-  console.log(sentence);
+  console.log(topic);
 
   // 替换诗句，得到输出题目
-  let replaceStr = getReplaceString(sentence.length);
-  let output = lineStr.replace(sentence, replaceStr);
+  let replaceStr = getReplaceString(topic.length);
+  let output = sentence.replace(topic, replaceStr);
   console.log(output);
+
+  const index = `${num1}_${num2}_${num3}`;
+  console.log(index);
 
   return {
     topic: output,
-    answer: sentence,
-    poem: poem
+    answer: topic,
+    poem: poem,
+    index: index
   }
 }
 
