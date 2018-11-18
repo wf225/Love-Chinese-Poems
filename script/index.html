@@ -1,0 +1,44 @@
+<html>
+
+<header>
+  <script src="axios.min.js"></script>
+</header>
+
+<body>
+  <p>
+    爱上古诗复习题库
+  </p>
+  <input type="button" value="下一个" onclick=getPoem()>
+
+  <p>
+    题目：
+    <div id="topic"></div>
+  </p>
+  <p>
+    答案：
+    <div id="answer"></div>
+  </p>
+  <p>
+    全诗：
+    <div id="poem"></div>
+  </p>
+
+  <script>
+    function getPoem() {
+      var url = "/get_poem"
+      axios.get(url).then(function (response) {
+        var jsonObject = response.data;
+        // var jsonString = JSON.stringify(jsonObject)
+        // document.getElementById("hero").innerHTML = jsonString;
+        document.getElementById("topic").innerHTML = jsonObject.topic;
+        document.getElementById("answer").innerHTML = jsonObject.answer;
+        document.getElementById("poem").innerHTML = JSON.stringify(jsonObject.poem);
+      })
+    }
+  </script>
+
+
+
+</body>
+
+</html>
