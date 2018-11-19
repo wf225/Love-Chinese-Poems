@@ -8,8 +8,9 @@ app.get('/index.htm', function (req, res) {
   res.sendFile(__dirname + "/" + "index.htm");
 })
 
-app.get('/get_poem', function (req, res) {
-  res.send(loader.getTopic());
+app.get('/get_topics/:num', function (req, res) {
+  let num = req.params['num'];
+  res.send(loader.getTopics(num));
 })
 
 let server = app.listen(8081, function () {
