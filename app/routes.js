@@ -1,4 +1,4 @@
-let loader = require("./loader");
+let loader = require("./server/loader");
 
 module.exports = function (app) {
 
@@ -40,7 +40,7 @@ module.exports = function (app) {
 */
 
   app.get('/index.html', function (req, res) {
-    res.sendFile(__dirname + "/" + "index.html");
+    res.sendFile(__dirname + "/public/" + "index.html");
   })
 
   app.get('/get_topics/:num', function (req, res) {

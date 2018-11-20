@@ -3,13 +3,13 @@ let app = express();
 let server = require('http').createServer(app);
 
 // app.set('port', process.env.PORT || 8081);
-app.use(express.static('./')); // set the static files location /public/img will be /img for users
+app.use(express.static('./public/')); // set the static files location /public/img will be /img for users
 
 // routes
 require('./routes.js')(app);
 
 // listen (start app with node server.js)
-let host = "192.168.1.8"; // "localhost";
+let host = "localhost"; // "192.168.1.8";s
 const port = "8081";
 // app.listen(port);
 // console.log("Server listening on port " + port);

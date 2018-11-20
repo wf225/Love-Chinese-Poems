@@ -3,7 +3,7 @@ let fs = require("fs");
 /**
  * 读取 markdown 文件中的全部内容，返回 JSON 格式的数组。
  */
-function getPoems(markdownPath) {
+function loadPoems(markdownPath) {
   // 同步读取
   let data = fs.readFileSync(markdownPath);
   // console.log("同步读取: " + data.toString());
@@ -110,9 +110,9 @@ function getPoems() {
   try {
     // 读取文件 markdown 文件，转为 json 格式
     const markdownPath = "../爱上古诗/唐诗.md";
-    const jsonPath = "./poems.json";
+    const jsonPath = "./server/poems.json";
     if (!fs.existsSync(jsonPath)) {
-      const poemsObj = getPoems(markdownPath);
+      const poemsObj = loadPoems(markdownPath);
       fs.writeFileSync(jsonPath, JSON.stringify(poemsObj, null, 2));
     }
 
