@@ -161,7 +161,7 @@ function getRandomTopic(poems) {
     // 随机抽取诗中的半句
     let topicArr = sentence.split("，");
     let num4 = getRandomNum(0, topicArr.length - 1);
-    index = `${num1}_${num2}_${num3}_${num4}`;
+    // index = `${num1}_${num2}_${num3}_${num4}`;
     let topic = topicArr[num4];
     // console.log(topicArr);
     // console.log(topic);

@@ -87,6 +87,21 @@
   </script>
 
   <script>
+    document.addEventListener("keydown", keydown);
+
+    function keydown(event) {
+      //表示键盘监听所触发的事件，同时传递参数event
+      switch (event.keyCode) {
+        // case 37:
+        //   alert("左键");
+        //   break;
+        case 39:
+          // alert("右键");
+          getNext();
+          break;
+      }
+    }
+
     function viewRender(viewId, templateId, data) {
       layui.use('laytpl', function (laytpl) {
 
@@ -119,7 +134,7 @@
     }
 
     function getNext() {
-      // console.log(index);
+      console.log(index);
 
       if (poemArr.length === 0 || index === NUM) {
         getPoems((data) => {
