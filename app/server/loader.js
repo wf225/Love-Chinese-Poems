@@ -1,5 +1,22 @@
 let fs = require("fs");
 
+// endsWith
+if (!String.prototype.endsWith) {
+  String.prototype.endsWith = function (search, this_len) {
+    if (this_len === undefined || this_len > this.length) {
+      this_len = this.length;
+    }
+    return this.substring(this_len - search.length, this_len) === search;
+  };
+}
+
+// trim
+if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  };
+}
+
 /**
  * 读取 markdown 文件中的全部内容，返回 JSON 格式的数组。
  */
@@ -48,6 +65,12 @@ function loadPoems(markdownPath) {
  * 读取一首诗词
  */
 function getPoem(lineData, poem) {
+  // 读到空行，直接返回
+  if(lineData === "") {
+    return;
+  }
+  lineData = lineData.trim();
+
   // 读取诗名
   if (lineData.substr(0, 3) === "## ") {
     poem.title = lineData.substring(3);
@@ -150,7 +173,7 @@ function getRandomTopic(poems) {
 
     // 随机抽取诗中的一句
     let sentenceArr = lineContent.split("。"); // [ '人闲桂花落，夜静春山空', '' ]
-    if(sentenceArr[sentenceArr.length - 1] === '') {
+    if (sentenceArr[sentenceArr.length - 1] === '') {
       sentenceArr.pop(); // 去掉最后一个为空的 item
     }
     // console.log(sentenceArr);
