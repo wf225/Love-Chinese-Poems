@@ -134,7 +134,7 @@ body{background: #FFF;}
 .main-about ul.aboutab li:first-child{margin-left: 0;}
 .main-about ul.aboutab li.layui-this
 ,.main-about ul.aboutab li:hover{color: #2ab5a3; border-color: #afddd7; transition: 0.3s;}
-.main-about .tabJob, .main-about .tabCour{display: none;}
+.main-about .tabJob, .main-about .tabCour{display: block;}
 /*公司简介*/
 .main-about .tabIntro{padding-bottom: 15px;}
 .main-about .tabIntro .content{vertical-align: middle;}
@@ -185,8 +185,8 @@ body{background: #FFF;}
   .nav{max-height: 80px;}
   .nav.index{background: rgba(255, 255, 255 ,0.3);}
   .nav .nav-list button{display: none;}
-  .nav .layui-nav{width: auto; position: absolute; top: 0; padding: 0 5px; border-radius: 0; margin: 0;}
-  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 53px; line-height: 80px;}
+  .nav .layui-nav{width: auto; position: absolute; top: 0; padding: 25px 5px 0 5px; border-radius: 0; margin: 0;}
+  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 53px; line-height: 38px;}
   .main-product p.title
   ,.main-service p.title{font-size: 36px; line-height: 216px;}
   .main.product .content .content-img{text-align: left;}

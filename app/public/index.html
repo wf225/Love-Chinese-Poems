@@ -19,10 +19,10 @@
         <h1>爱上古诗 - 题库</h1>
       </div>
       <div class="nav-list">
-        <ul class="layui-nav" lay-filter="">
-            <li class="layui-nav-item"><a href="index.html">答案</a></li>
-            <li class="layui-nav-item layui-this"><a onclick=getNext()>下一个</a></li>
-          </ul>
+        <ul class="layui-nav">
+          <li class="layui-nav-item layui-btn layui-btn-primary"><a onclick="getAnswer()">答案</a></li>
+          <li class="layui-nav-item layui-btn layui-btn-primary layui-this"><a onclick="getNext()">下一个</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -32,23 +32,25 @@
     <div class="layui-container">
       <div class="layui-row">
         <ul class="aboutab">
-          <li class="layui-this">答案</li>
-          <li onclick=getNext()>下一个</li>
+          <!-- <li>答案</li>
+          <li class="layui-this" onclick=getNext()>下一个</li> -->
         </ul>
         <div class="tabJob">
           <div class="content">
-            <p id="topic_view2" class="title" style="text-align: center"></p>
-            <p id="answer_view" style="color: #ff00a3"></p>
+            <div class="layui-inline">
+              <p id="topic_view2" class="title" style="text-align: center">爱上古诗</p>
+              <p id="answer_view" style="color: #ff00a3"></p>
+            </div>
           </div>
-          <div class="content">
+          <div class="content" id="poem_view_container">
             <p id="poem_view"></p>
           </div>
         </div>
-        <div class="tabJob">
+        <!-- <div class="tabJob">
           <div class="content">
             <p id="topic_view" class="title" style="text-align: center">爱上古诗</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -92,12 +94,16 @@
     function keydown(event) {
       //表示键盘监听所触发的事件，同时传递参数event
       switch (event.keyCode) {
-        // case 37:
+        // case 37: // ArrowLeft
         //   alert("左键");
         //   break;
-        case 39:
-          // alert("右键");
+        case 39: // ArrowRight
           getNext();
+          break;
+        case 40: // ArrowDown
+          getAnswer();
+          break;
+        default:
           break;
       }
     }
@@ -119,11 +125,6 @@
         controller(view);
       });
     }
-
-    //
-    let poemArr = Array();
-    let index = 0;
-    const NUM = 100; // 一次获取题目的数量
 
     function getPoems(callback) {
       var url = `/get_topics/${NUM}`;
@@ -150,6 +151,8 @@
         const jsonObj = poemArr[index++];
         render(jsonObj);
       }
+
+      showAnswer(false);
     }
 
     function render(jsonObj) {
@@ -157,11 +160,27 @@
       poem.contentList = poem.content.split("\n");
       // console.log(poem);
 
-      viewRender('topic_view', "topicView", jsonObj);
+      // viewRender('topic_view', "topicView", jsonObj);
       viewRender('topic_view2', "topicView", jsonObj);
       viewRender('answer_view', "answerView", jsonObj);
       viewRender('poem_view', "poemView", poem);
     }
+
+    function getAnswer() {
+      showAnswer(true);
+    }
+
+    function showAnswer(isDisplay) {
+      document.getElementById("answer_view").hidden = !isDisplay;
+      document.getElementById("poem_view_container").hidden = !isDisplay;
+    }
+
+    // init
+    let poemArr = Array();
+    let index = 0;
+    const NUM = 100; // 一次获取题目的数量
+    showAnswer(false);
+
   </script>
 </body>
 
