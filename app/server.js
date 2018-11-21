@@ -9,8 +9,8 @@ app.use(express.static('./public/')); // set the static files location /public/i
 require('./routes.js')(app);
 
 // listen (start app with node server.js)
-let host = "localhost"; // "192.168.1.8"
-const port = "8081";
+let host = "192.168.199.10"; // "192.168.1.8"
+const port = "8001";
 // app.listen(port);
 // console.log("Server listening on port " + port);
 server.listen(port, host, function () {
