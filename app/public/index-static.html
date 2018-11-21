@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./res/static/css/index.css">
   <script src="./res/layui/layui.js"></script>
   <script src="./libs/axios/axios.min.js"></script>
+  <script src="./js/poemsDataSource.js"></script>
+  <script src="./js/loader.js"></script>
 </head>
 
 <body>
@@ -124,42 +126,28 @@
       });
     }
 
-    function getPoems(callback) {
-      var url = `/get_topics/${NUM}`;
-      // 一次抽取100题
-      axios.get(url).then(function (response) {
-        callback(response.data);
-      });
-    }
-
     function getNext() {
       console.log(index);
 
       if (poemArray.length === 0 || index === NUM) {
-        getPoems((data) => {
-          poemArray = data;
-          console.log(JSON.stringify(poemArray));
-          const jsonObj = poemArray[index++];
-          render(jsonObj);
-        });
+        // 一次抽取100题
+        poemArray = getTopics(NUM);
 
         if (index === NUM) {
+          // 重新计数
           index = 0;
         }
-      } else {
-        const jsonObj = poemArray[index++];
-        render(jsonObj);
       }
 
+      const jsonObj = poemArray[index++];
+      render(jsonObj);
       showAnswer(false);
     }
 
     function render(jsonObj) {
       let poem = jsonObj.poem;
       poem.contentList = poem.content.split("\n");
-      // console.log(poem);
 
-      // viewRender('topic_view', "topicView", jsonObj);
       viewRender('topic_view2', "topicView", jsonObj);
       viewRender('answer_view', "answerView", jsonObj);
       viewRender('poem_view', "poemView", poem);
