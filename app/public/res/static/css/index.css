@@ -17,6 +17,7 @@ body{background: #FFF;}
 .nav.scroll{ background: #FFF; box-shadow: 0 3px 3px 0 rgba(0,0,0,0.05); transition: 0.3s}
 .nav .layui-container{position: relative; transition: all 400ms ease-out;}
 .nav .nav-logo{height: 100%; position: absolute; top: 0; left: 15px; line-height: 80px;}
+.nav .nav-index{color: #2db5a3;}
 .nav .nav-list{display: inline-block; height: 80px;}
 .nav .nav-list button{width: 25px; height: 30px; position: absolute; top: 30px; right: 15px; background-color: transparent; border: none; outline: none; cursor: pointer;}
 .nav .nav-list button span{display: block; width: 25px; height: 2px; background: #2db5a3; margin-bottom: 6px; transition: 0.5s;}
