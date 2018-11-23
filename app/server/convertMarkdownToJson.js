@@ -29,12 +29,16 @@ function loadFile(markdownPath) {
   let dataArr = dataStr.split("\n");
   let poem = null;
   let poemArr = Array();
+  let inProgress = false;
 
   for (i = 0; i < dataArr.length; i++) {
     const lineData = dataArr[i];
 
     // 过滤没学过的
     if (lineData === "### TODO") {
+      inProgress = true;
+    }
+    if (lineData === "### TODO-end") {
       break;
     }
 
@@ -44,7 +48,8 @@ function loadFile(markdownPath) {
         author: "",
         content: "",
         isStart: false,
-        isEnd: false
+        isEnd: false,
+        inProgress: inProgress
       };
     }
 
@@ -53,6 +58,10 @@ function loadFile(markdownPath) {
     }
 
     if (poem !== null && poem.isEnd) {
+      // 删除属性
+      delete poem.isStart;
+      delete poem.isEnd;
+
       poemArr.push(poem);
       poem = null; // set poem to null when the reading is ended.
     }
