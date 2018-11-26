@@ -549,7 +549,7 @@ var poems =
   {
     "title": "墨梅",
     "author": "元 - 王冕",
-    "content": "吾家洗砚池头树，朵朵花开淡墨痕。\n不要人夸好颜色，只流(留)清气满乾坤。",
+    "content": "吾家洗砚池头树，朵朵花开淡墨痕。\n不要人夸好颜色，只留清气满乾坤。",
     "inProgress": false
   },
   {
@@ -632,7 +632,7 @@ var poems =
   },
   {
     "title": "石灰吟",
-    "author": "(明)于谦",
+    "author": "明 - 于谦",
     "content": "千锤万凿出深山，烈火焚烧若等闲。\n粉骨碎身浑不怕，要留清白在人间。",
     "inProgress": true
   },
