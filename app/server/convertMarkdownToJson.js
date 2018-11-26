@@ -1,4 +1,5 @@
-let fs = require("fs");
+const fs = require("fs");
+const path = require("path");
 
 // endsWith
 if (!String.prototype.endsWith) {
@@ -121,9 +122,9 @@ function getPoem(lineData, poem) {
 function getPoems() {
   try {
     // 读取文件 markdown 文件，转为 json 格式
-    const markdownPath = "../../爱上古诗/唐诗.md";
-    const outputJSONPath = "./dataSource.json";
-    const outputJSPath = "../public/js/dataSource.js";
+    const markdownPath = path.join(__dirname, "../../爱上古诗/唐诗.md");
+    const outputJSONPath = path.join(__dirname, "./dataSource.json");
+    const outputJSPath = path.join(__dirname, "../public/js/dataSource.js");
 
     if (!fs.existsSync(outputJSONPath)) {
       const poemsObj = loadFile(markdownPath);

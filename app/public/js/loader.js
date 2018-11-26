@@ -121,5 +121,20 @@ function getTopics(number) {
   return result;
 }
 
-// let poemArray = getTopics(100);
+function getInprogress() {
+  let result = Array();
+
+  for (i = poems.length - 1; i >= 0; i--) {
+    let item = poems[i];
+    if (item.inProgress) {
+      result.push(item);
+    } else {
+      break;
+    }
+  }
+
+  return result;
+}
+
+// let poemArray = getInprogress(); // getTopics(100);
 // console.log(poemArray);

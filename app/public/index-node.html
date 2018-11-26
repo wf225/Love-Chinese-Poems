@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="./res/static/css/index.css">
   <script src="./res/layui/layui.js"></script>
   <script src="./libs/axios/axios.min.js"></script>
-  <script src="./js/dataSource.js"></script>
-  <script src="./js/loader.js"></script>
 </head>
 
 <body>
@@ -18,12 +16,15 @@
   <div class="nav">
     <div class="layui-container">
       <div class="nav-logo">
-        <h1>爱上古诗 - 题库 <span id="index_view" class="nav-index"></span></h1>
+        <h1>爱上古诗 - 题库</h1>
       </div>
       <div class="nav-list">
+        <button>
+          <span></span><span></span><span></span>
+        </button>
         <ul class="layui-nav" lay-filter="">
-          <li class="layui-nav-item layui-this"><a href="index.html">答题</a></li>
-          <li class="layui-nav-item"><a href="inprogress.html">学习</a></li>
+          <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
+          <li class="layui-nav-item"><a href="about.html">关于</a></li>
         </ul>
       </div>
     </div>
@@ -91,9 +92,9 @@
     function keydown(event) {
       //表示键盘监听所触发的事件，同时传递参数event
       switch (event.keyCode) {
-        case 37: // ArrowLeft
-          getPrevious();
-          break;
+        // case 37: // ArrowLeft
+        //   alert("左键");
+        //   break;
         case 39: // ArrowRight
           getNext();
           break;
@@ -103,43 +104,6 @@
         default:
           break;
       }
-    }
-
-    function getNext() {
-      console.log(index);
-
-      if (poemArray.length === 0 || index === NUM) {
-        // 一次抽取100题
-        poemArray = getTopics(NUM);
-
-        // 重新计数
-        if (index === NUM) {
-          index = 0;
-        }
-
-        // 重置 NUM
-        if (NUM > poemArray.length) {
-          NUM = poemArray.length;
-        }
-      }
-
-      const jsonObj = poemArray[index++];
-      render(jsonObj);
-      showAnswer(false);
-    }
-
-    function getPrevious() {
-      // 重新计数
-      if (index === 1) {
-        index = poemArray.length + 1;
-      }
-
-      index = index - 2;
-      const jsonObj = poemArray[index];
-
-      index = index + 1; // for display
-      render(jsonObj);
-      showAnswer(false);
     }
 
     function viewRender(viewId, templateId, data) {
@@ -160,15 +124,45 @@
       });
     }
 
+    function getPoems(callback) {
+      var url = `/get_topics/${NUM}`;
+      // 一次抽取100题
+      axios.get(url).then(function (response) {
+        callback(response.data);
+      });
+    }
+
+    function getNext() {
+      console.log(index);
+
+      if (poemArray.length === 0 || index === NUM) {
+        getPoems((data) => {
+          poemArray = data;
+          console.log(JSON.stringify(poemArray));
+          const jsonObj = poemArray[index++];
+          render(jsonObj);
+        });
+
+        if (index === NUM) {
+          index = 0;
+        }
+      } else {
+        const jsonObj = poemArray[index++];
+        render(jsonObj);
+      }
+
+      showAnswer(false);
+    }
+
     function render(jsonObj) {
       let poem = jsonObj.poem;
       poem.contentList = poem.content.split("\n");
+      // console.log(poem);
 
+      // viewRender('topic_view', "topicView", jsonObj);
       viewRender('topic_view2', "topicView", jsonObj);
       viewRender('answer_view', "answerView", jsonObj);
       viewRender('poem_view', "poemView", poem);
-      // index_view
-      document.getElementById("index_view").innerHTML = `${index} / ${NUM}`;
     }
 
     function getAnswer() {
@@ -180,11 +174,12 @@
       document.getElementById("poem_view_container").hidden = !isDisplay;
     }
 
-    // init()
-    let poemArray = Array(); // init in getNext().
+    // init
+    let poemArray = Array();
     let index = 0;
-    let NUM = 10; // 每次抽取的题目数量, 如果大于文章数量，将自动调整
+    const NUM = 100; // 一次获取题目的数量
     showAnswer(false);
+
   </script>
 </body>
 
