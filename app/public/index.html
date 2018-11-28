@@ -61,7 +61,7 @@
   </script>
 
   <script id="poemView" type="text/html">
-    <h3>{{ d.title }}</h3>
+    <h3><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h3>
     <h5>{{ d.author }}</h5>
     <ul>
     {{#  layui.each(d.contentList, function(index, item){ }}

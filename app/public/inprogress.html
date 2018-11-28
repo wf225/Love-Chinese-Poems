@@ -34,6 +34,7 @@
     <div class="layui-container">
       <div class="layui-row">
         <ul class="aboutab">
+          <a class="layui-btn layui-btn-primary" href="https://share.weiyun.com/5IdIOOE" target="_blank">微云资料</a>
           <a class="layui-btn layui-btn-primary" onclick="getPrevious()">上一首</a>
           <a class="layui-btn layui-btn-primary layui-this" onclick="getNext()">下一首</a>
         </ul>
@@ -47,7 +48,7 @@
   </div>
 
   <script id="poemView" type="text/html">
-    <h3>{{ d.title }}</h3>
+    <h3><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h3>
     <h5>{{ d.author }}</h5>
     <ul>
     {{#  layui.each(d.contentList, function(index, item){ }}
