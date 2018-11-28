@@ -73,6 +73,21 @@
   </script>
 
   <script>
+    document.addEventListener("keydown", keydown);
+
+    function keydown(event) {
+      //表示键盘监听所触发的事件，同时传递参数event
+      switch (event.keyCode) {
+        case 37: // ArrowLeft
+          getPrevious();
+          break;
+        case 39: // ArrowRight
+          getNext();
+          break;
+        default:
+          break;
+      }
+    }
 
     function viewRender(viewId, templateId, data) {
       layui.use('laytpl', function (laytpl) {
