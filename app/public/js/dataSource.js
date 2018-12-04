@@ -634,19 +634,19 @@ var poems =
     "title": "石灰吟",
     "author": "明 - 于谦",
     "content": "千锤万凿出深山，烈火焚烧若等闲。\n粉骨碎身全不怕，要留清白在人间。",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "钱塘湖春行",
     "author": "唐 - 白居易",
     "content": "孤山寺北贾亭西，水面初平云脚低。\n几处早莺争暖树，谁家新燕啄春泥。\n乱花渐欲迷人眼，浅草才能没马蹄。\n最爱湖东行不足，绿杨阴里白沙堤。",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "闻官军收河南河北",
     "author": "唐 - 杜甫",
     "content": "剑外忽传收蓟北，初闻涕泪满衣裳。\n却看妻子愁何在，漫卷诗书喜欲狂。\n白日放歌须纵酒，青春作伴好还乡。\n即从巴峡穿巫峡，便下襄阳向洛阳。",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "酬乐天扬州初逢席上见赠",
@@ -667,15 +667,27 @@ var poems =
     "inProgress": true
   },
   {
+    "title": "使至塞上",
+    "author": "唐 - 王维",
+    "content": "单车欲问边，属国过居延。\n征蓬出汉塞，归雁入胡天\n大漠孤烟直，长河落日圆。\n萧关逢候骑，都护在燕然。",
+    "inProgress": true
+  },
+  {
     "title": "山中",
     "author": "唐 - 王维",
     "content": "荆溪白石出，天寒红叶稀。\n山路元无雨，空翠湿人衣。",
     "inProgress": true
   },
   {
-    "title": "使至塞上",
+    "title": "行宫",
+    "author": "唐代 - 元稹",
+    "content": "寥落古行宫，宫花寂寞红。\n白头宫女在，闲坐说玄宗。",
+    "inProgress": true
+  },
+  {
+    "title": "杂诗三首·其二",
     "author": "唐 - 王维",
-    "content": "单车欲问边，属国过居延。\n征蓬出汉塞，归雁入胡天\n大漠孤烟直，长河落日圆。\n萧关逢候骑，都护在燕然。",
+    "content": "君自故乡来，应知故乡事。\n来日绮窗前，寒梅著花未。",
     "inProgress": true
   }
 ];
