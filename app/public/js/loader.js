@@ -121,7 +121,7 @@ function getTopics(number) {
   return result;
 }
 
-function getInprogress() {
+function getTodoList() {
   let result = Array();
 
   for (i = poems.length - 1; i >= 0; i--) {
@@ -132,9 +132,24 @@ function getInprogress() {
       break;
     }
   }
-
-  return result;
+  return result.reverse();
 }
 
-// let poemArray = getInprogress(); // getTopics(100);
+// 获取最近学习的10首
+function getReviewList() {
+  let result = Array();
+
+  for (i = poems.length - 1; i >= 0; i--) {
+    let item = poems[i];
+    if (!item.inProgress) {
+      result.push(item);
+    }
+    if (result.length >= 10) {
+      break;
+    }
+  }
+  return result.reverse();
+}
+
+// let poemArray = getTodoList(); // getTopics(100);
 // console.log(poemArray);

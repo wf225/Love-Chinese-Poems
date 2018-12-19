@@ -23,7 +23,8 @@
       <div class="nav-list">
         <ul class="layui-nav" lay-filter="">
           <li class="layui-nav-item"><a href="index.html">答题</a></li>
-          <li class="layui-nav-item layui-this"><a href="inprogress.html">学习</a></li>
+          <li class="layui-nav-item"><a href="todo.html">学习</a></li>
+          <li class="layui-nav-item layui-this"><a href="review.html">回顾</a></li>
         </ul>
       </div>
     </div>
@@ -116,9 +117,10 @@
     }
 
     // init
-    let poemArray = getInprogress();
+    let poemArray = getReviewList();
     let index = 0;
     let NUM = poemArray.length;
+    console.log(poemArray);
 
     function getNext() {
       // 重新计数
