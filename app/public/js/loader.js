@@ -96,6 +96,7 @@ function getRandomTopic(poems) {
 
 }
 
+// 获取制定数目的题目
 function getTopics(number) {
   let result = Array();
   let indexArr = Array();
@@ -121,6 +122,7 @@ function getTopics(number) {
   return result;
 }
 
+// 获取正在学习的
 function getTodoList() {
   let result = Array();
 
@@ -135,7 +137,7 @@ function getTodoList() {
   return result.reverse();
 }
 
-// 获取最近学习的10首
+// 获取要复习的10首
 function getReviewList() {
   let result = Array();
 
