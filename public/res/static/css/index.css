@@ -20,7 +20,7 @@ body{font-family: Sun; background: #FFF;}
 ,.nav .layui-nav .layui-nav-item a:hover{color: #2db5a3;}
 
 .nav .layui-nav-right{width: auto; position: fixed; right: 15px; top: 41px;}
-.layui-btn{width: 75px; height: 28px; line-height:28px; overflow:hidden;}
+.layui-btn{width: 75px; height: 28px; line-height:28px; overflow:hidden; display: inline-table;}
 
 /** 关于 */
 .banner.about{background: url(../img/nav_img4.jpg) no-repeat center top; background-size: cover;}
@@ -40,7 +40,7 @@ body{font-family: Sun; background: #FFF;}
 .main-about .tabIntro .content p{padding: 0 20px; line-height: 24px; text-align: justify;}
 .main-about .tabIntro .p_hidden{padding: 0 20px; display: none;}
 /*招贤纳士*/
-.main-about .tabJob .content{padding: 0 0 20px 20px; border: 1px solid #e2e2e2; border-top: 4px solid #65d0c5; margin-top: 20px;}
+.main-about .tabJob .content{padding: 0 0 20px 0px; border: 1px solid #e2e2e2; border-top: 4px solid #65d0c5; margin-top: 20px;}
 .main-about .tabJob .content:first-child{margin-top: 10px;}
 .main-about .tabJob .content p{font-size: 18px; line-height: 40px;}
 .main-about .tabJob .content p.title{font-size: 24px; color: #545454; line-height: 60px;}
