@@ -36,7 +36,7 @@
     
     
       
-        <title>iABC 学习资源</title>
+        <title>答题 - iABC 学习资源</title>
       
     
     
@@ -102,7 +102,7 @@
                 iABC 学习资源
               </span>
               <span class="md-header-nav__topic">
-                诗词题库
+                答题
               </span>
             
           
@@ -186,15 +186,65 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      诗词题库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        诗词题库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="诗词题库" class="md-nav__link md-nav__link--active">
-      诗词题库
+    <a href="./" title="答题" class="md-nav__link md-nav__link--active">
+      答题
     </a>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="todo/" title="学习" class="md-nav__link">
+      学习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="review/" title="回顾" class="md-nav__link">
+      回顾
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -391,7 +441,8 @@
               
                 
                 
-                <p><link rel="stylesheet" href="./res/layui/css/layui.css">
+                <h1 id="_1"></h1>
+<p><link rel="stylesheet" href="./res/layui/css/layui.css">
   <link rel="stylesheet" href="./res/static/css/index.css">
   <script src="./res/layui/layui.js"></script>
   <script src="./js/dataSource.js"></script>
@@ -433,15 +484,17 @@
     </div>
   </div></p>
 <p><script id="topicView" type="text/html">
-    <h1>{{ d.topic }}</h1>
+    <h2>{{ d.topic }}</h2>
   </script></p>
 <p><script id="answerView" type="text/html">
     <h3>{{ d.answer }}</h3>
   </script></p>
 <p><script id="poemView" type="text/html">
-    <h3 style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h3>
-    <h5 style="display: inline">{{ d.author }}</h5>
     <ul>
+      <li>
+        <h2 style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h2>
+        <h5 style="display: inline">{{ d.author }}</h5>
+      </li>
     {{#  layui.each(d.contentList, function(index, item){ }}
       <li>
         <span>{{ item }}</span>
@@ -498,13 +551,13 @@
           </a>
         
         
-          <a href="../爱上古诗/天乐学古诗/" title="天乐学古诗" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="todo/" title="学习" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                天乐学古诗
+                学习
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -20,8 +20,7 @@ body{font-family: Sun; background: #FFF;}
 ,.nav .layui-nav .layui-nav-item a:hover{color: #2db5a3;}
 
 .nav .layui-nav-right{width: auto; position: fixed; right: 15px; top: 41px;}
-.layui-btn{width: 75px; height: 28px; line-height:28px; overflow:hidden; }
-.poemView{white-space:nowrap;}
+.layui-btn{width: 75px; height: 28px; line-height:28px; overflow:hidden;}
 
 /*轮播*/
 #banner img{min-width: 100%; height: 898px;}
