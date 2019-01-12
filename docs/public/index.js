@@ -80,7 +80,7 @@ function render(jsonObj) {
   viewRender('answer_view', "answerView", jsonObj);
   viewRender('poem_view', "poemView", poem);
   // index_view
-  document.getElementById("index_view").innerHTML = `${index} / ${NUM}`;
+  document.getElementById("index_view").innerHTML = `${index}/${NUM}`;
 }
 
 function getAnswer() {

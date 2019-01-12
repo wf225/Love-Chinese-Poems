@@ -30,16 +30,14 @@
       <div class="layui-row">
         <div class="tabJob">
           <div class="content">
-            <div class="layui-inline">
-              <ul>
-                <li>
-                  <p id="topic_view2" class="title" style="text-align: center">爱上古诗：100题闯关</p>
-                </li>
-                <li>
-                  <p id="answer_view" style="color: #ff00a3"></p>
-                </li>
-              </ul>
-            </div>
+            <ul>
+              <li>
+                <p id="topic_view2">爱上古诗：100题闯关</p>
+              </li>
+              <li>
+                <p id="answer_view" style="color: #ff00a3"></p>
+              </li>
+            </ul>
           </div>
           <div class="content" id="poem_view_container">
             <p id="poem_view"></p>
@@ -50,11 +48,11 @@
   </div>
 
   <script id="topicView" type="text/html">
-    <h2>{{ d.topic }}</h2>
+    {{ d.topic }}
   </script>
 
   <script id="answerView" type="text/html">
-    <h3>{{ d.answer }}</h3>
+    {{ d.answer }}
   </script>
 
   <script id="poemView" type="text/html">
