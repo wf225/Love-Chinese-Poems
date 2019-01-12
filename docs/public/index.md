@@ -1,4 +1,4 @@
-  
+# 
   <link rel="stylesheet" href="./res/layui/css/layui.css">
   <link rel="stylesheet" href="./res/static/css/index.css">
   <script src="./res/layui/layui.js"></script>
@@ -31,8 +31,14 @@
         <div class="tabJob">
           <div class="content">
             <div class="layui-inline">
-              <p id="topic_view2" class="title" style="text-align: center">爱上古诗</p>
-              <p id="answer_view" style="color: #ff00a3"></p>
+              <ul>
+                <li>
+                  <p id="topic_view2" class="title" style="text-align: center">爱上古诗：100题闯关</p>
+                </li>
+                <li>
+                  <p id="answer_view" style="color: #ff00a3"></p>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="content" id="poem_view_container">
@@ -44,7 +50,7 @@
   </div>
 
   <script id="topicView" type="text/html">
-    <h1>{{ d.topic }}</h1>
+    <h2>{{ d.topic }}</h2>
   </script>
 
   <script id="answerView" type="text/html">
@@ -52,9 +58,11 @@
   </script>
 
   <script id="poemView" type="text/html">
-    <h3 style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h3>
-    <h5 style="display: inline">{{ d.author }}</h5>
     <ul>
+      <li>
+        <h2 style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h2>
+        <h5 style="display: inline">{{ d.author }}</h5>
+      </li>
     {{#  layui.each(d.contentList, function(index, item){ }}
       <li>
         <span>{{ item }}</span>

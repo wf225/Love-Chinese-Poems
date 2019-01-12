@@ -38,9 +38,11 @@
   </div>
 
   <script id="poemView" type="text/html">
-    <h3 style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h3>
-    <h5 style="display: inline">{{ d.author }}</h5>
     <ul>
+      <li>
+        <h2 style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></h2>
+        <h5 style="display: inline">{{ d.author }}</h5>
+      </li>
     {{#  layui.each(d.contentList, function(index, item){ }}
       <li>
         <span>{{ item }}</span>
