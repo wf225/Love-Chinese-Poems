@@ -1,3 +1,7 @@
+/**
+ * Convert Markdown to JSON
+ */
+
 const fs = require("fs");
 const path = require("path");
 
@@ -119,13 +123,8 @@ function getPoem(lineData, poem) {
 /**
  * 获取全部诗词，返回一个 json 对象。
  */
-function getPoems() {
+function getPoems(markdownPath, outputJSONPath, outputJSPath) {
   try {
-    // 读取文件 markdown 文件，转为 json 格式
-    const markdownPath = path.join(__dirname, "../../爱上古诗/唐诗.md");
-    const outputJSONPath = path.join(__dirname, "./dataSource.json");
-    const outputJSPath = path.join(__dirname, "../public/js/dataSource.js");
-
     if (!fs.existsSync(outputJSONPath)) {
       const poemsObj = loadFile(markdownPath);
       const poemsStr = JSON.stringify(poemsObj, null, 2);
@@ -145,6 +144,12 @@ function getPoems() {
   }
 }
 
-getPoems();
+
+// 读取文件 markdown 文件，转为 json 格式
+const markdownPath = path.join(__dirname, "../../docs/爱上古诗/天乐学古诗.md");
+const outputJSONPath = path.join(__dirname, "./dataSource.json");
+const outputJSPath = path.join(__dirname, "../../docs/public/js/dataSource.js");
+
+getPoems(markdownPath, outputJSONPath, outputJSPath);
 
 // exports.getTopics = getTopics;

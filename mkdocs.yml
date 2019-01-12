@@ -1,16 +1,20 @@
 site_name: iABC 学习资源
 
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2019 iABC'
+
 nav:
 # pages:
   - 主页: 'index.md'
 
+  - 诗词题库: 'public/index.md'
   - 爱上古诗:
+    - '天乐学古诗': '爱上古诗/天乐学古诗.md'
     - '唐诗': '爱上古诗/唐诗.md'
     - '宋词': '爱上古诗/宋词.md'
     - '乐府民歌': '爱上古诗/乐府民歌.md'
     - '长诗10首': '爱上古诗/长诗10首.md'
-    - '小学必备80首': '爱上古诗/唐诗.md'
-
+    
   - 少儿编程:
     - 'microbit': '少儿编程/microbit/index.md'
 

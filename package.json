@@ -7,9 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "mkdocs build --clean",
-    "deploy": "mkdocs gh-deploy --clean",
-    "start": "mkdocs serve"
+    "build": "npm run genDataSource && mkdocs build --clean",
+    "deploy": "npm run genDataSource && mkdocs gh-deploy --clean",
+    "start": "mkdocs serve",
+    "genDataSource": "cd app && npm run build"
   },
   "repository": {
     "type": "git",
