@@ -8,7 +8,7 @@ nav:
   - 主页: 'index.md'
 
   - 古诗题库:
-    - '100题闯关': 'public/index.md'
+    - '闯关答题': 'public/index.md'
     - '本周学习': 'public/todo.md'
     - '回顾': 'public/review.md'
 
