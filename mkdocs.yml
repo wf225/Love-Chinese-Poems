@@ -44,3 +44,6 @@ theme:
     language: 'en, zh'
     tokenizer: '[\s\-\.]+'
   language: 'zh'
+
+extra_css:
+  - css/extra.css
