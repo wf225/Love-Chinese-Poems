@@ -52,7 +52,8 @@ function getRandomTopic(poems) {
     // 随机抽取诗中的一行
     let num2 = getRandomNum(0, contentArr.length - 1);
     let lineContent = contentArr[num2];
-    if (lineContent === "") {
+    var regex = /\n[\s| ]*\r/; // 匹配空行
+    if (lineContent.match(regex)) {
       num2 = num2 - 1;
       lineContent = contentArr[num2];
     }
@@ -60,30 +61,29 @@ function getRandomTopic(poems) {
     // console.log(lineContent);
 
     // 随机抽取诗中的一句
-    let sentenceArr = lineContent.split("。"); // [ '人闲桂花落，夜静春山空', '' ]
+    // 查找“0 或多个空白符接着的标点符号[，,。，？，；]，再接着 0 或多个空白符”模式的字符串。
+    var re = /\s*(?:[，,。，？，；]|$)\s*/;
+    let sentenceArr = lineContent.split(re); // [ '人闲桂花落，夜静春山空', '' ]
+    
+    // 去掉最后一个为空的 item
     if (sentenceArr[sentenceArr.length - 1] === '') {
-      sentenceArr.pop(); // 去掉最后一个为空的 item
+      sentenceArr.pop();
     }
     // console.log(sentenceArr);
+    
+    // 随机抽取诗中的一句
     let num3 = getRandomNum(0, sentenceArr.length - 1);
     index = `${num1}_${num2}_${num3}`;
     let sentence = sentenceArr[num3];
 
-    // 随机抽取诗中的半句
-    let topicArr = sentence.split("，");
-    let num4 = getRandomNum(0, topicArr.length - 1);
-    // index = `${num1}_${num2}_${num3}_${num4}`;
-    let topic = topicArr[num4];
-    // console.log(topicArr);
-    // console.log(topic);
-
     // 替换诗句，得到输出题目
-    let replaceStr = getReplaceString(topic.length);
-    let output = sentence.replace(topic, replaceStr);
+    let replaceStr = getReplaceString(sentence.length);
+    let output = lineContent.replace(sentence, replaceStr);
+    // console.log(output);
 
     return {
       topic: output,
-      answer: topic,
+      answer: sentence,
       poem: poem,
       index: index
     }
