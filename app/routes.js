@@ -45,7 +45,7 @@ module.exports = function (app) {
 
   app.get('/get_topics/:num', function (req, res) {
     let num = req.params['num'];
-    res.send(loader.getTopics(num));
+    res.send(loader.getQuestions(num));
   })
 
 };

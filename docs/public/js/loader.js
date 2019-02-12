@@ -20,8 +20,8 @@ if (!String.prototype.trim) {
  * 获取随机数
  */
 function getRandomNum(Min, Max) {
-  let Range = Max - Min;
-  let Rand = Math.random();
+  var Range = Max - Min;
+  var Rand = Math.random();
   return (Min + Math.round(Rand * Range));
 }
 
@@ -29,7 +29,7 @@ function getRandomNum(Min, Max) {
  * 获取替换站位符
  */
 function getReplaceString(length) {
-  let result = "";
+  var result = "";
   for (i = 0; i < length; i++) {
     result += "_ ";
   }
@@ -42,18 +42,18 @@ function getReplaceString(length) {
 function getRandomTopic(poems) {
 
   // 随机抽取一首诗
-  let num1 = getRandomNum(0, poems.length - 1);
-  let poem = poems[num1];
-  let index = `${num1}`;
+  var num1 = getRandomNum(0, poems.length - 1);
+  var poem = poems[num1];
+  var index = `${num1}`;
 
   try {
-    let contentArr = poem.content.split("\n");
+    var contentArr = poem.content.split("\n");
 
     // 随机抽取诗中的一行
-    let num2 = getRandomNum(0, contentArr.length - 1);
-    let lineContent = contentArr[num2];
-    var regex = /\n[\s| ]*\r/; // 匹配空行
-    if (lineContent.match(regex)) {
+    var num2 = getRandomNum(0, contentArr.length - 1);
+    var lineContent = contentArr[num2];
+    var regex1 = /\n[\s| ]*\r/; // 匹配空行
+    if (lineContent.match(regex1)) {
       num2 = num2 - 1;
       lineContent = contentArr[num2];
     }
@@ -62,23 +62,23 @@ function getRandomTopic(poems) {
 
     // 随机抽取诗中的一句
     // 查找“0 或多个空白符接着的标点符号[，,。，？，；]，再接着 0 或多个空白符”模式的字符串。
-    var re = /\s*(?:[，,。，？，；]|$)\s*/;
-    let sentenceArr = lineContent.split(re); // [ '人闲桂花落，夜静春山空', '' ]
-    
+    var regex2 = /\s*(?:[，,。,？,；]|$)\s*/;
+    var sentenceArr = lineContent.split(regex2); // [ '人闲桂花落，夜静春山空', '' ]
+
     // 去掉最后一个为空的 item
     if (sentenceArr[sentenceArr.length - 1] === '') {
       sentenceArr.pop();
     }
     // console.log(sentenceArr);
-    
+
     // 随机抽取诗中的一句
-    let num3 = getRandomNum(0, sentenceArr.length - 1);
+    var num3 = getRandomNum(0, sentenceArr.length - 1);
     index = `${num1}_${num2}_${num3}`;
-    let sentence = sentenceArr[num3];
+    var sentence = sentenceArr[num3];
 
     // 替换诗句，得到输出题目
-    let replaceStr = getReplaceString(sentence.length);
-    let output = lineContent.replace(sentence, replaceStr);
+    var replaceStr = getReplaceString(sentence.length);
+    var output = lineContent.replace(sentence, replaceStr);
     // console.log(output);
 
     return {
@@ -96,17 +96,20 @@ function getRandomTopic(poems) {
 
 }
 
-// 获取制定数目的题目
-function getTopics(number) {
-  let result = Array();
-  let indexArr = Array();
+// 获取指定数目的题目
+function getQuestions(number) {
+  var result = Array();
+  var indexArr = Array();
 
-  if (number > poems.length) {
-    number = poems.length;
+  if (number > POEMS.length) {
+    number = POEMS.length;
   }
 
+  // TODO:
+  countWords(POEMS);
+
   do {
-    const topic = getRandomTopic(poems);
+    const topic = getRandomTopic(POEMS);
     try {
       if (indexArr.indexOf(topic.index) === -1) {
         result.push(topic);
@@ -124,10 +127,10 @@ function getTopics(number) {
 
 // 获取正在学习的
 function getTodoList() {
-  let result = Array();
+  var result = Array();
 
-  for (i = poems.length - 1; i >= 0; i--) {
-    let item = poems[i];
+  for (i = POEMS.length - 1; i >= 0; i--) {
+    var item = POEMS[i];
     if (item.inProgress) {
       result.push(item);
     } else {
@@ -137,21 +140,117 @@ function getTodoList() {
   return result.reverse();
 }
 
-// 获取要复习的10首
+// 获取要最近学习的20首进行复习
 function getReviewList() {
-  let result = Array();
+  var result = Array();
 
-  for (i = poems.length - 1; i >= 0; i--) {
-    let item = poems[i];
+  for (i = POEMS.length - 1; i >= 0; i--) {
+    var item = POEMS[i];
     if (!item.inProgress) {
       result.push(item);
     }
-    if (result.length >= 10) {
+    if (result.length >= 20) {
       break;
     }
   }
   return result.reverse();
 }
 
-// let poemArray = getTodoList(); // getTopics(100);
+/**
+ * 文字统计
+ */
+function countWords(poems) {
+  var wordsMap = new Map();
+  var mapKeys = [];
+
+  // 处理一首
+  for (i = 0; i < poems.length; i++) {
+    var poem = poems[i];
+    var contentArr = poem.content.split("\n");
+
+    // 处理一行
+    for (j = 0; j < contentArr.length; j++) {
+      var isDuplicate = false;
+      var lineContent = contentArr[j];
+      var regex1 = /\n[\s| ]*\r/; // 匹配空行
+      if (lineContent.match(regex1)) {
+        continue;
+      }
+
+      // 处理一句
+      var regex2 = /\s*(?:[，,。,？,；]|$)\s*/;
+      var sentenceArr = lineContent.split(regex2);
+      for (k = 0; k < sentenceArr.length; k++) {
+        if (isDuplicate) {
+          break;
+        }
+
+        var sentence = sentenceArr[k];
+        // 去除空字符
+        if (sentence === "") {
+          continue;
+        }
+
+        // 分割成单个汉字
+        var wordArr = sentence.split("");
+        for (l = 0; l < wordArr.length; l++) {
+          if (isDuplicate) {
+            break;
+          }
+
+          var key = wordArr[l];
+          var item = {};
+          if (wordsMap.has(key)) {
+            // 累计计数
+            item = wordsMap.get(key);
+            item.count = item.count + 1;
+            item.list.push({
+              answer: lineContent,
+              poem: poem
+            });
+          } else {
+            // 首次计数
+            mapKeys.push(key);
+            item = {
+              count: 1,
+              list: [{
+                answer: lineContent,
+                poem: poem
+              }]
+            };
+          }
+
+          wordsMap.set(key, item);
+
+          // 去除重复
+          var regex3 = `\s*(?:[${key}]|$)\s*`;
+          var reg3 = new RegExp(regex3);
+          if (lineContent.split(reg3).length > 2) {
+            isDuplicate = true;
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  // 排序，并获取出现次数大于5的文字
+  mapKeys.sort(function (a, b) {
+    return wordsMap.get(b).count - wordsMap.get(a).count;
+  });
+  
+  var result = new Map();
+  var minCount = 5;
+  mapKeys.forEach((key, index) => {
+    var value = wordsMap.get(key);
+    if (value.count >= minCount) {
+      result.set(key, value);
+    }
+  });
+
+  console.log(result);
+  return result;
+}
+
+// var poemArray = getTodoList(); // getQuestions(100);
 // console.log(poemArray);

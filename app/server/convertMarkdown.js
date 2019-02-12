@@ -130,7 +130,7 @@ function getPoems(markdownPath, outputJSONPath, outputJSPath) {
       const poemsStr = JSON.stringify(poemsObj, null, 2);
 
       fs.writeFileSync(outputJSONPath, poemsStr);
-      fs.writeFileSync(outputJSPath, `var poems = \n${poemsStr};`);
+      fs.writeFileSync(outputJSPath, `var POEMS = \n${poemsStr};`);
 
       return poemsObj;
     } else {
@@ -152,4 +152,4 @@ const outputJSPath = path.join(__dirname, "../../docs/public/js/dataSource.js");
 
 getPoems(markdownPath, outputJSONPath, outputJSPath);
 
-// exports.getTopics = getTopics;
+// exports.getQuestions = getQuestions;

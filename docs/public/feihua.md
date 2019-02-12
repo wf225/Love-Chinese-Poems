@@ -1,19 +1,19 @@
 # 
-  <link rel="stylesheet" href="./res/layui/css/layui.css">
-  <link rel="stylesheet" href="./res/static/css/index.css">
-  <script src="./res/layui/layui.js"></script>
-  <script src="./js/dataSource.js"></script>
-  <script src="./js/loader.js"></script>
+  <link rel="stylesheet" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/static/css/index.css">
+  <script src="../res/layui/layui.js"></script>
+  <script src="../js/dataSource.js"></script>
+  <script src="../js/loader.js"></script>
 
   <!-- nav部分 -->
   <div class="nav">
     <div class="layui-container">
       <div class="nav-list">
         <ul class="layui-nav">
-          <li class="layui-nav-item layui-this"><a href="./">答题</a></li>
-          <li class="layui-nav-item"><a href="todo">学习</a></li>
-          <li class="layui-nav-item"><a href="review">回顾</a></li>
-          <li class="layui-nav-item"><a href="feihua">飞花令</a></li>
+          <li class="layui-nav-item"><a href="../">答题</a></li>
+          <li class="layui-nav-item"><a href="../todo">学习</a></li>
+          <li class="layui-nav-item"><a href="../review">回顾</a></li>
+          <li class="layui-nav-item layui-this"><a href="../feihua">飞花令</a></li>
         </ul>
         <ul class="layui-nav-right">
           <a class="layui-btn layui-btn-primary" onclick="getAnswer()">答案</a>
@@ -79,9 +79,9 @@
   <![endif]-->
   <script>
     layui.config({
-      base: './res/static/js/'
+      base: '../res/static/js/'
     }).use('firm');
   </script>
 
-  <script src="./index.js">
+  <script src="../feihua.js">
   </script>

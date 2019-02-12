@@ -97,7 +97,7 @@ function getRandomTopic(poems) {
 }
 
 // 获取制定数目的题目
-function getTopics(number) {
+function getQuestions(number) {
   let result = Array();
   let indexArr = Array();
 
@@ -153,5 +153,5 @@ function getReviewList() {
   return result.reverse();
 }
 
-// let poemArray = getTodoList(); // getTopics(100);
+// let poemArray = getTodoList(); // getQuestions(100);
 // console.log(poemArray);

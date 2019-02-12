@@ -208,7 +208,7 @@ function getRandomTopic(poems) {
 
 }
 
-function getTopics(number) {
+function getQuestions(number) {
   const poems = getPoems();
   let result = Array();
   let indexArr = Array();
@@ -234,7 +234,7 @@ function getTopics(number) {
   return result;
 }
 
-// let test = getTopics(100);
+// let test = getQuestions(100);
 // console.log(test);
 
-exports.getTopics = getTopics;
+exports.getQuestions = getQuestions;

@@ -22,7 +22,7 @@ function getNext() {
 
   if (poemArray.length === 0 || index === NUM) {
     // 一次抽取100题
-    poemArray = getTopics(NUM);
+    poemArray = getQuestions(NUM);
 
     // 重新计数
     if (index === NUM) {
