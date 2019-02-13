@@ -39,7 +39,7 @@ body{font-family: Sun; background: #FFF;}
 .main-about .tabJob .content ul li{color: #000000; font-size: 22px; line-height: 40px;}
 /* .main-about .tabJob .content ul li:before {content: counter(sectioncounter) "、"; counter-increment: sectioncounter;} */
 /*发展历程*/
-.keysView{font-size: 14px; line-height: 24px; cursor: pointer;}
+.keysView{font-size: 16px; line-height: 24px; cursor: pointer;}
 
 @media screen and (max-width: 480px){
   .nav .layui-nav .layui-nav-item{display: none}
