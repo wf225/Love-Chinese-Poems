@@ -17,12 +17,17 @@ function keydown(event) {
   }
 }
 
+function init() {
+  keysArray = getFeiHuaLing();
+  keysRender(keysArray);
+}
+
 function getNext() {
   console.log(index);
 
   if (poemArray.length === 0 || index === NUM) {
-    // 一次抽取100题
-    poemArray = getQuestions(NUM);
+    // // 一次抽取100题
+    // poemArray = getQuestions(NUM);
 
     // 重新计数
     if (index === NUM) {
@@ -76,11 +81,29 @@ function render(jsonObj) {
   let poem = jsonObj.poem;
   poem.contentList = poem.content.split("\n");
 
-  viewRender('topic_view2', "topicView", jsonObj);
-  viewRender('answer_view', "answerView", jsonObj);
-  viewRender('poem_view', "poemView", poem);
-  // index_view
-  document.getElementById("index_view").innerHTML = `${index}/${NUM}`;
+  viewRender('topicView', "topicViewTpl", jsonObj);
+  // viewRender('answerView', "answerViewTpl", jsonObj);
+  viewRender('poemView', "poemViewTpl", poem);
+  // indexView
+  document.getElementById("indexView").innerHTML = `"${KEY}": ${index}/${NUM}`;
+}
+
+function keysRender(data) {
+  layui.use('laytpl', function (laytpl) {
+
+    var view = document.getElementById("keysView");
+    var getTpl = document.getElementById("keysViewTpl").innerHTML;
+    var controller = function (view) {
+      try {
+        var html = laytpl(getTpl).render(data);
+        view.innerHTML = html;
+      } catch (e) {
+        view.innerHTML = '<span style="color: #c00;">' + e.toString() + '</span>';
+      }
+    };
+
+    controller(view);
+  });
 }
 
 function getAnswer() {
@@ -88,12 +111,38 @@ function getAnswer() {
 }
 
 function showAnswer(isDisplay) {
-  document.getElementById("answer_view").hidden = !isDisplay;
+  // document.getElementById("answerView").hidden = !isDisplay;
   document.getElementById("poem_view_container").hidden = !isDisplay;
 }
 
+function enableNavButtons(enable) {
+  document.getElementById("btnNav").hidden = !enable;
+}
+
+function handleKeyClick(key) {
+  keysArray.forEach((item, _index) => {
+    if (item.key === key) {
+      poemArray = item.value.list;
+      NUM = poemArray.length;
+      KEY = key;
+
+      // 初始化提示
+      document.getElementById("topicView").innerHTML = `飞花令关键字："${KEY}"`;
+      document.getElementById("indexView").innerHTML = `"${KEY}"`;
+      enableNavButtons(true);
+      return;
+    }
+  });
+}
+
 // init()
-let poemArray = Array(); // init in getNext().
-let index = 0;
-let NUM = 100; // 每次抽取的题目数量, 如果大于文章数量，将自动调整
+var keysArray = [];
+var poemArray = []; // init in getNext().
+var index = 0;
+var KEY = "";
+var NUM = 0; // 题目数量
+
+init();
+
 showAnswer(false);
+enableNavButtons(false);

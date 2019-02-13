@@ -105,9 +105,6 @@ function getQuestions(number) {
     number = POEMS.length;
   }
 
-  // TODO:
-  countWords(POEMS);
-
   do {
     const topic = getRandomTopic(POEMS);
     try {
@@ -156,8 +153,25 @@ function getReviewList() {
   return result.reverse();
 }
 
+// 获取飞花令统计列表
+function getFeiHuaLing() {
+  return countWords(POEMS);
+}
+
 /**
  * 文字统计
+ * result = {
+     {
+       key: keyword
+       value: {
+                count: 1,
+                list: [{
+                  answer: lineContent,
+                  poem: poem
+                }]
+              }
+      }
+    }
  */
 function countWords(poems) {
   var wordsMap = new Map();
@@ -239,16 +253,18 @@ function countWords(poems) {
     return wordsMap.get(b).count - wordsMap.get(a).count;
   });
   
-  var result = new Map();
+  // var result = new Map();
+  var result = [];
   var minCount = 5;
   mapKeys.forEach((key, index) => {
     var value = wordsMap.get(key);
     if (value.count >= minCount) {
-      result.set(key, value);
+      // result.set(key, value);
+      result.push({ key, value });
     }
   });
 
-  console.log(result);
+  // console.log(result);
   return result;
 }
 

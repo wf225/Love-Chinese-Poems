@@ -15,13 +15,13 @@
           <li class="layui-nav-item"><a href="../review">回顾</a></li>
           <li class="layui-nav-item layui-this"><a href="../feihua">飞花令</a></li>
         </ul>
-        <ul class="layui-nav-right">
-          <a class="layui-btn layui-btn-primary" onclick="getAnswer()">答案</a>
-          <a class="layui-btn layui-btn-primary" onclick="getPrevious()">上一个</a>
-          <a class="layui-btn layui-btn-primary layui-this" onclick="getNext()">下一个</a>
+        <ul class="layui-nav-right" id="btnNav">
+          <a class="layui-btn layui-btn-primary" id="btnAnswer" onclick="getAnswer()">全文</a>
+          <a class="layui-btn layui-btn-primary" id="btnPrevious" onclick="getPrevious()">上一个</a>
+          <a class="layui-btn layui-btn-primary layui-this" id="btnNext" onclick="getNext()">下一个</a>
         </ul>
       </div>
-      <span id="index_view" class="nav-index"></span>
+      <span id="indexView" class="nav-index"></span>
     </div>
   </div>
 
@@ -30,33 +30,34 @@
     <div class="layui-container">
       <div class="layui-row">
         <div class="tabJob">
+          <div id="keysView" class="content"></div>
           <div class="content">
             <ul>
               <li>
-                <p id="topic_view2">爱上古诗：100题闯关</p>
+                <p id="topicView">飞花令: 请选择关键字</p>
               </li>
-              <li>
-                <p id="answer_view" style="color: #ff00a3"></p>
-              </li>
+              <!-- <li>
+                <p id="answerView" style="color: #ff00a3"></p>
+              </li> -->
             </ul>
           </div>
           <div class="content" id="poem_view_container">
-            <p id="poem_view"></p>
+            <p id="poemView"></p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <script id="topicView" type="text/html">
-    {{ d.topic }}
-  </script>
-
-  <script id="answerView" type="text/html">
+  <script id="topicViewTpl" type="text/html">
     {{ d.answer }}
   </script>
 
-  <script id="poemView" type="text/html">
+  <!-- <script id="answerViewTpl" type="text/html">
+    {{ d.answer }}
+  </script> -->
+
+  <script id="poemViewTpl" type="text/html">
     <ul>
       <li>
         <div style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></div>
@@ -71,6 +72,14 @@
       无数据
     {{#  } }} 
     </ul>
+  </script>
+
+  <script id="keysViewTpl" type="text/html">
+    <div class="keysView">
+    {{#  layui.each(d, function(index, item){ }}
+      <a onclick = handleKeyClick("{{ item.key }}")>{{ item.key }} ({{ item.value.count }})</a>
+    {{#  }); }}
+    </div>
   </script>
 
   <!--[if lt IE 9]>
