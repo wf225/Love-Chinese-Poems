@@ -138,7 +138,7 @@ function getTodoList() {
 }
 
 // 获取要最近学习的20首进行复习
-function getReviewList() {
+function getReviewList(num) {
   var result = Array();
 
   for (i = POEMS.length - 1; i >= 0; i--) {
@@ -146,7 +146,7 @@ function getReviewList() {
     if (!item.inProgress) {
       result.push(item);
     }
-    if (result.length >= 20) {
+    if (result.length >= num) {
       break;
     }
   }

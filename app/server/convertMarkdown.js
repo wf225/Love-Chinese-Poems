@@ -52,6 +52,7 @@ function loadFile(markdownPath) {
         title: "",
         author: "",
         content: "",
+        url: "",
         isStart: false,
         isEnd: false,
         inProgress: inProgress
@@ -87,9 +88,11 @@ function getPoem(lineData, poem) {
 
   // 读取诗名
   if (lineData.substr(0, 3) === "## ") {
-    poem.title = lineData.substring(3);
-    if (poem.title.substr(0, 1) === "[") {
-      poem.title = poem.title.substr(1, poem.title.indexOf("]") - 1);
+    var title = lineData.substring(3);
+    poem.title = title;
+    if (title.substr(0, 1) === "[") {
+      poem.title = title.substring(1, title.indexOf("]"));
+      poem.url = title.substring(title.lastIndexOf("(") + 1, title.lastIndexOf(")"));
     }
     return;
   }

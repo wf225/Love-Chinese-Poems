@@ -60,7 +60,13 @@
   <script id="poemViewTpl" type="text/html">
     <ul>
       <li>
-        <div style="display: inline"><a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a></div>
+        <div style="display: inline">
+        {{# if(d.url === ""){ }}
+          <a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a>
+        {{# }else{ }}
+          <a style="color: #0000ff" href ="{{ d.url }}" target="_blank">{{ d.title }}</a>
+        {{# } }}
+        </div>
         <h5 style="display: inline">{{ d.author }}</h5>
       </li>
     {{#  layui.each(d.contentList, function(index, item){ }}
