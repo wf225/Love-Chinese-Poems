@@ -993,5 +993,40 @@ var POEMS =
     "content": "红军不怕远征难，万水千山只等闲。\n五岭逶迤腾细浪，乌蒙磅礴走泥丸。\n金沙水拍云崖暖，大渡桥横铁索寒。\n更喜岷山千里雪，三军过后尽开颜。",
     "url": "https://baike.baidu.com/item/七律·长征",
     "inProgress": true
+  },
+  {
+    "title": "大风歌",
+    "author": "两汉：刘邦",
+    "content": "大风起兮云飞扬，\n威加海内兮归故乡，\n安得猛士兮守四方！",
+    "url": "https://baike.baidu.com/item/大风歌/14542",
+    "inProgress": true
+  },
+  {
+    "title": "长干行二首 其一节选",
+    "author": "唐 - 李白",
+    "content": "郎骑竹马来，绕床弄青梅。\n同居长干里，两小无嫌猜。",
+    "url": "https://baike.baidu.com/item/长干行二首/3544094",
+    "inProgress": true
+  },
+  {
+    "title": "青玉案·元夕",
+    "author": "南宋 - 辛弃疾",
+    "content": "东风夜放花千树，更吹落，星如雨。\n宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。\n蛾儿雪柳黄金缕，笑语盈盈暗香去。\n众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。",
+    "url": "https://baike.baidu.com/item/青玉案·元夕/2582543",
+    "inProgress": true
+  },
+  {
+    "title": "正月十五夜",
+    "author": "",
+    "content": "火树银花合，星桥铁锁开。\n暗尘随马去。明月逐人来。\n游妓皆秾李，行歌尽落梅。\n金吾不禁夜，玉漏莫相催。",
+    "url": "https://baike.baidu.com/item/正月十五夜/233086",
+    "inProgress": true
+  },
+  {
+    "title": "生查子·元夕",
+    "author": "宋 - 欧阳修",
+    "content": "去年元夜时，花市灯如昼。\n月上柳梢头，人约黄昏后。\n今年元夜时，月与灯依旧。\n不见去年人，泪湿春衫袖。",
+    "url": "https://baike.baidu.com/item/生查子·元夕",
+    "inProgress": true
   }
 ];
