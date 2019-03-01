@@ -974,38 +974,10 @@ var POEMS =
     "inProgress": true
   },
   {
-    "title": "菩萨蛮·书江西造口壁",
-    "author": "南宋 - 辛弃疾",
-    "content": "郁孤台下清江水，中间多少行人泪。\n西北望长安，可怜无数山。\n青山遮不住，毕竟东流去。\n江晚正愁余，山深闻鹧鸪。",
-    "url": "https://baike.baidu.com/item/菩萨蛮·书江西造口壁/6978208",
-    "inProgress": true
-  },
-  {
-    "title": "水调歌头·明月几时有",
-    "author": "宋 - 苏轼",
-    "content": "明月几时有，把酒问青天。\n不知天上宫阙，今夕是何年？\n我欲乘风归去，又恐琼楼玉宇，高处不胜寒。\n起舞弄清影，何似在人间！\n转朱阁，低绮户，照无眠。\n不应有恨，何事长向别时圆？\n人有悲欢离合，月有阴晴圆缺，此事古难全。\n但愿人长久，千里共婵娟。",
-    "url": "https://baike.baidu.com/item/水调歌头·明月几时有",
-    "inProgress": true
-  },
-  {
     "title": "七律·长征",
     "author": "现代 - 毛泽东",
     "content": "红军不怕远征难，万水千山只等闲。\n五岭逶迤腾细浪，乌蒙磅礴走泥丸。\n金沙水拍云崖暖，大渡桥横铁索寒。\n更喜岷山千里雪，三军过后尽开颜。",
     "url": "https://baike.baidu.com/item/七律·长征",
-    "inProgress": true
-  },
-  {
-    "title": "大风歌",
-    "author": "两汉：刘邦",
-    "content": "大风起兮云飞扬，\n威加海内兮归故乡，\n安得猛士兮守四方！",
-    "url": "https://baike.baidu.com/item/大风歌/14542",
-    "inProgress": true
-  },
-  {
-    "title": "长干行二首 其一节选",
-    "author": "唐 - 李白",
-    "content": "郎骑竹马来，绕床弄青梅。\n同居长干里，两小无嫌猜。",
-    "url": "https://baike.baidu.com/item/长干行二首/3544094",
     "inProgress": true
   },
   {
@@ -1016,24 +988,24 @@ var POEMS =
     "inProgress": true
   },
   {
-    "title": "正月十五夜",
-    "author": "",
-    "content": "火树银花合，星桥铁锁开。\n暗尘随马去。明月逐人来。\n游妓皆秾李，行歌尽落梅。\n金吾不禁夜，玉漏莫相催。",
-    "url": "https://baike.baidu.com/item/正月十五夜/233086",
-    "inProgress": true
-  },
-  {
-    "title": "生查子·元夕",
-    "author": "宋 - 欧阳修",
-    "content": "去年元夜时，花市灯如昼。\n月上柳梢头，人约黄昏后。\n今年元夜时，月与灯依旧。\n不见去年人，泪湿春衫袖。",
-    "url": "https://baike.baidu.com/item/生查子·元夕",
-    "inProgress": true
-  },
-  {
     "title": "二十四节气歌",
     "author": "佚名",
     "content": "春雨惊春清谷天，夏满芒夏暑相连。\n秋处露秋寒霜降，冬雪雪冬小大寒。\n每月两节不变更，最多相差一两天。\n上半年来六廿一，下半年是八廿三。",
     "url": "https://baike.baidu.com/item/二十四节气歌",
+    "inProgress": true
+  },
+  {
+    "title": "水调歌头·明月几时有",
+    "author": "宋 - 苏轼",
+    "content": "明月几时有，把酒问青天。\n不知天上宫阙，今夕是何年？\n我欲乘风归去，又恐琼楼玉宇，高处不胜寒。\n起舞弄清影，何似在人间！\n转朱阁，低绮户，照无眠。\n不应有恨，何事长向别时圆？\n人有悲欢离合，月有阴晴圆缺，此事古难全。\n但愿人长久，千里共婵娟。",
+    "url": "https://baike.baidu.com/item/水调歌头·明月几时有",
+    "inProgress": true
+  },
+  {
+    "title": "大风歌",
+    "author": "两汉：刘邦",
+    "content": "大风起兮云飞扬，\n威加海内兮归故乡，\n安得猛士兮守四方！",
+    "url": "https://baike.baidu.com/item/大风歌/14542",
     "inProgress": true
   }
 ];
