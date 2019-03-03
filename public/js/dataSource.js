@@ -817,195 +817,328 @@ var POEMS =
     "author": "南宋 - 陆游",
     "content": "莫笑农家腊酒浑，丰年留客足鸡豚。\n山重水复疑无路，柳暗花明又一村。\n箫鼓追随春社近，衣冠简朴古风存。\n从今若许闲乘月，拄杖无时夜叩门。",
     "url": "https://baike.baidu.com/item/游山西村/5834615",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "白鹿洞二首 其一",
     "author": "五代 - 王贞白",
     "content": "读书不觉已春深，一寸光阴一寸金。\n不是道人来引笑，周情孔思正追寻。",
     "url": "https://baike.baidu.com/item/白鹿洞二首",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "增广贤文 节选",
     "author": "明代儿童启蒙书目",
     "content": "一寸光阴一寸金，寸金难买寸光阴。\n黑发不知勤学早，转眼便是白头翁。",
     "url": "",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "望月怀远",
     "author": "唐 - 张九龄",
     "content": "海上生明月，天涯共此时。\n情人怨遥夜，竟夕起相思。\n灭烛怜光满，披衣觉露滋。\n不堪盈手赠，还寝梦佳期。",
     "url": "",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "秋夜将晓出篱门迎凉有感 其二",
     "author": "南宋 - 陆游",
     "content": "三万里河东入海，五千仞岳上摩天。\n遗民泪尽胡尘里，南望王师又一年。",
     "url": "https://baike.baidu.com/item/秋夜将晓出篱门迎凉有感二首/13023903",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "食荔枝",
     "author": "宋 - 苏轼",
     "content": "罗浮山下四时春，芦橘杨梅次第新；\n日啖荔枝三百颗，不辞长作岭南人。",
     "url": "",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "怨情",
     "author": "唐 - 李白",
     "content": "美人卷珠帘，深坐颦蛾眉。\n但见泪痕湿，不知心恨谁。",
     "url": "",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "卜算子·咏梅",
     "author": "现代 - 毛泽东",
     "content": "风雨送春归，飞雪迎春到。\n已是悬崖百丈冰，犹有花枝俏。\n俏也不争春，只把春来报。\n待到山花烂漫时，她在丛中笑。",
     "url": "https://baike.baidu.com/item/卜算子·咏梅/124232",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "卜算子·咏梅",
     "author": "南宋 - 陆游",
     "content": "驿外断桥边，寂寞开无主。\n已是黄昏独自愁，更著风和雨。\n无意苦争春，一任群芳妒。\n零落成泥碾作尘，只有香如故。",
     "url": "https://baike.baidu.com/item/卜算子·咏梅/139",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "小儿垂钓",
     "author": "唐 - 胡令能",
     "content": "蓬头稚子学垂纶，侧坐莓苔草映身。\n路人借问遥招手，怕得鱼惊不应人。",
     "url": "https://baike.baidu.com/item/小儿垂钓",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "池上 其二",
     "author": "唐 - 白居易",
     "content": "小娃撑小艇，偷采白莲回。\n不解藏踪迹，浮萍一道开。",
     "url": "",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "夏日绝句",
     "author": "宋 - 李清照",
     "content": "生当作人杰，死亦为鬼雄。\n至今思项羽，不肯过江东。",
     "url": "https://baike.baidu.com/item/夏日绝句/9245",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "蜂",
     "author": "唐 - 罗隐",
     "content": "不论平地与山尖，无限风光尽被占。\n采得百花成蜜后，为谁辛苦为谁甜？",
     "url": "",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "江上渔者",
     "author": "宋 - 范仲淹",
     "content": "江上往来人，但爱鲈鱼美。\n君看一叶舟，出没风波里。",
     "url": "",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "书湖阴先生壁 其一",
     "author": "北宋 - 王安石",
     "content": "茅檐长扫净无苔，花木成畦手自栽。\n一水护田将绿绕，两山排闼送青来。",
     "url": "https://baike.baidu.com/item/书湖阴先生壁二首/296524",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "六月二十七日望湖楼醉书 其一",
     "author": "宋 - 苏轼",
     "content": "黑云翻墨未遮山，白雨跳珠乱入船。\n卷地风来忽吹散，望湖楼下水如天。",
     "url": "https://baike.baidu.com/item/六月二十七日望湖楼醉书五首/4867093",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "破阵子·为陈同甫赋壮词以寄",
     "author": "南宋 - 辛弃疾",
     "content": "醉里挑灯看剑，梦回吹角连营。\n八百里分麾下炙，五十弦翻塞外声。沙场秋点兵。\n马作的卢飞快，弓如霹雳弦惊。\n了却君王天下事，赢得生前身后名。可怜白发生。",
     "url": "https://baike.baidu.com/item/破阵子·为陈同甫赋壮词以寄",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "南乡子·登京口北固亭有怀",
     "author": "南宋 - 辛弃疾",
     "content": "何处望神州？满眼风光北固楼。\n千古兴亡多少事？悠悠。不尽长江滚滚流。\n年少万兜鍪，坐断东南战未休。\n天下英雄谁敌手？曹刘。生子当如孙仲谋。",
     "url": "https://baike.baidu.com/item/南乡子·登京口北固亭有怀/5765861",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "夏日田园杂兴 其一",
     "author": "宋 - 范成大",
     "content": "梅子金黄杏子肥，麦花雪白菜花稀。\n日长篱落无人过，唯有蜻蜓蛱蝶飞。",
     "url": "https://baike.baidu.com/item/夏日田园杂兴",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "夏日田园杂兴 其二",
     "author": "宋 - 范成大",
     "content": "昼出耘田夜绩麻，村庄儿女各当家。\n童孙未解供耕织，也傍桑阴学种瓜。",
     "url": "https://baike.baidu.com/item/夏日田园杂兴",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "乡村四月",
     "author": "南宋 - 翁卷",
     "content": "绿遍山原白满川，子规声里雨如烟。\n乡村四月闲人少，才了蚕桑又插田。",
     "url": "https://baike.baidu.com/item/乡村四月",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "村居",
     "author": "清 - 高鼎",
     "content": "草长莺飞二月天，拂堤杨柳醉春烟。\n儿童散学归来早，忙趁东风放纸鸢。",
     "url": "https://baike.baidu.com/item/村居/2240609",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "天净沙·秋思",
     "author": "元曲作家 马致远",
     "content": "枯藤老树昏鸦，小桥流水人家，古道西风瘦马。\n夕阳西下，断肠人在天涯。",
     "url": "https://baike.baidu.com/item/天净沙·秋思/3411320",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "七律·长征",
     "author": "现代 - 毛泽东",
     "content": "红军不怕远征难，万水千山只等闲。\n五岭逶迤腾细浪，乌蒙磅礴走泥丸。\n金沙水拍云崖暖，大渡桥横铁索寒。\n更喜岷山千里雪，三军过后尽开颜。",
     "url": "https://baike.baidu.com/item/七律·长征",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "青玉案·元夕",
     "author": "南宋 - 辛弃疾",
     "content": "东风夜放花千树，更吹落，星如雨。\n宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。\n蛾儿雪柳黄金缕，笑语盈盈暗香去。\n众里寻他千百度。蓦然回首，那人却在，灯火阑珊处。",
     "url": "https://baike.baidu.com/item/青玉案·元夕/2582543",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "二十四节气歌",
     "author": "佚名",
     "content": "春雨惊春清谷天，夏满芒夏暑相连。\n秋处露秋寒霜降，冬雪雪冬小大寒。\n每月两节不变更，最多相差一两天。\n上半年来六廿一，下半年是八廿三。",
     "url": "https://baike.baidu.com/item/二十四节气歌",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "水调歌头·明月几时有",
     "author": "宋 - 苏轼",
     "content": "明月几时有，把酒问青天。\n不知天上宫阙，今夕是何年？\n我欲乘风归去，又恐琼楼玉宇，高处不胜寒。\n起舞弄清影，何似在人间！\n转朱阁，低绮户，照无眠。\n不应有恨，何事长向别时圆？\n人有悲欢离合，月有阴晴圆缺，此事古难全。\n但愿人长久，千里共婵娟。",
     "url": "https://baike.baidu.com/item/水调歌头·明月几时有",
-    "inProgress": true
+    "inProgress": false
   },
   {
     "title": "大风歌",
     "author": "两汉：刘邦",
     "content": "大风起兮云飞扬，\n威加海内兮归故乡，\n安得猛士兮守四方！",
     "url": "https://baike.baidu.com/item/大风歌/14542",
+    "inProgress": false
+  },
+  {
+    "title": "长干行二首 其一节选",
+    "author": "唐 - 李白",
+    "content": "郎骑竹马来，绕床弄青梅。\n同居长干里，两小无嫌猜。",
+    "url": "https://baike.baidu.com/item/长干行二首/3544094",
+    "inProgress": true
+  },
+  {
+    "title": "所见",
+    "author": "清代：袁枚",
+    "content": "牧童骑黄牛，歌声振林樾。\n意欲捕鸣蝉，忽然闭口立。",
+    "url": "https://baike.baidu.com/item/所见/2921061",
+    "inProgress": true
+  },
+  {
+    "title": "赠刘景文",
+    "author": "宋代：苏轼",
+    "content": "荷尽已无擎雨盖，菊残犹有傲霜枝。\n一年好景君须记，最是橙黄橘绿时。",
+    "url": "https://baike.baidu.com/item/赠刘景文/2822413",
+    "inProgress": true
+  },
+  {
+    "title": "定风波·莫听穿林打叶声",
+    "author": "北宋 - 苏轼",
+    "content": "莫听穿林打叶声，何妨吟啸且徐行。\n竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。\n料峭春风吹酒醒，微冷，山头斜照却相迎。\n回首向来萧瑟处，归去，也无风雨也无晴。",
+    "url": "https://baike.baidu.com/item/定风波·莫听穿林打叶声/2807984",
+    "inProgress": true
+  },
+  {
+    "title": "江城子·密州出猎",
+    "author": "北宋 - 苏轼",
+    "content": "老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。\n为报倾城随太守，亲射虎，看孙郎。\n酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？\n会挽雕弓如满月，西北望，射天狼。",
+    "url": "https://baike.baidu.com/item/江城子·密州出猎",
+    "inProgress": true
+  },
+  {
+    "title": "菩萨蛮·书江西造口壁",
+    "author": "南宋 - 辛弃疾",
+    "content": "郁孤台下清江水，中间多少行人泪。\n西北望长安，可怜无数山。\n青山遮不住，毕竟东流去。\n江晚正愁余，山深闻鹧鸪。",
+    "url": "https://baike.baidu.com/item/菩萨蛮·书江西造口壁/6978208",
+    "inProgress": true
+  },
+  {
+    "title": "正月十五夜",
+    "author": "",
+    "content": "火树银花合，星桥铁锁开。\n暗尘随马去。明月逐人来。\n游妓皆秾李，行歌尽落梅。\n金吾不禁夜，玉漏莫相催。",
+    "url": "https://baike.baidu.com/item/正月十五夜/233086",
+    "inProgress": true
+  },
+  {
+    "title": "生查子·元夕",
+    "author": "宋 - 欧阳修",
+    "content": "去年元夜时，花市灯如昼。\n月上柳梢头，人约黄昏后。\n今年元夜时，月与灯依旧。\n不见去年人，泪湿春衫袖。",
+    "url": "https://baike.baidu.com/item/生查子·元夕",
+    "inProgress": true
+  },
+  {
+    "title": "永遇乐·京口北固亭怀古",
+    "author": "南宋 - 辛弃疾",
+    "content": "千古江山，英雄无觅，孙仲谋处。\n舞榭歌台，风流总被雨打风吹去。\n斜阳草树，寻常巷陌，人道寄奴曾住。\n想当年，金戈铁马，气吞万里如虎。\n元嘉草草，封狼居胥，赢得仓皇北顾。\n四十三年，望中犹记，烽火扬州路。\n可堪回首，佛狸祠下，一片神鸦社鼓。\n凭谁问，廉颇老矣，尚能饭否？",
+    "url": "https://baike.baidu.com/item/永遇乐·京口北固亭怀古",
+    "inProgress": true
+  },
+  {
+    "title": "过零丁洋",
+    "author": "宋代：文天祥",
+    "content": "辛苦遭逢起一经，干戈寥落四周星。\n山河破碎风飘絮，身世浮沉雨打萍。\n惶恐滩头说惶恐，零丁洋里叹零丁。\n人生自古谁无死？留取丹心照汗青。",
+    "url": "",
+    "inProgress": true
+  },
+  {
+    "title": "西江月·夜行黄沙道中",
+    "author": "南宋 - 辛弃疾",
+    "content": "明月别枝惊鹊，清风半夜鸣蝉。\n稻花香里说丰年，听取蛙声一片。\n七八个星天外，两三点雨山前。\n旧时茅店社林边，路转溪桥忽见。",
+    "url": "https://baike.baidu.com/item/西江月·夜行黄沙道中",
+    "inProgress": true
+  },
+  {
+    "title": "书愤五首·其一",
+    "author": "南宋 - 陆游",
+    "content": "早岁那知世事艰，中原北望气如山。\n楼船夜雪瓜洲渡，铁马秋风大散关。\n塞上长城空自许，镜中衰鬓已先斑。\n出师一表真名世，千载谁堪伯仲间！",
+    "url": "https://baike.baidu.com/item/书愤/1059791",
+    "inProgress": true
+  },
+  {
+    "title": "临安春雨初霁",
+    "author": "南宋 - 陆游",
+    "content": "世味年来薄似纱，谁令骑马客京华？\n小楼一夜听春雨，深巷明朝卖杏花。\n矮纸斜行闲作草，晴窗细乳戏分茶。\n素衣莫起风尘叹，犹及清明可到家。",
+    "url": "https://baike.baidu.com/item/临安春雨初霁",
+    "inProgress": true
+  },
+  {
+    "title": "锦瑟",
+    "author": "唐 - 李商隐",
+    "content": "锦瑟无端五十弦，一弦一柱思华年。\n庄生晓梦迷蝴蝶，望帝春心托杜鹃。\n沧海月明珠有泪，蓝田日暖玉生烟。\n此情可待成追忆，只是当时已惘然。",
+    "url": "https://baike.baidu.com/item/锦瑟",
+    "inProgress": true
+  },
+  {
+    "title": "登高",
+    "author": "唐 - 杜甫",
+    "content": "风急天高猿啸哀，渚清沙白鸟飞回。\n无边落木萧萧下，不尽长江滚滚来。\n万里悲秋常作客，百年多病独登台。\n艰难苦恨繁霜鬓，潦倒新停浊酒杯。",
+    "url": "https://baike.baidu.com/item/登高/7605079",
+    "inProgress": true
+  },
+  {
+    "title": "登金陵凤凰台",
+    "author": "唐 - 李白",
+    "content": "凤凰台上凤凰游，凤去台空江自流。\n吴宫花草埋幽径，晋代衣冠成古丘。\n三山半落青天外，二水中分白鹭洲。\n总为浮云能蔽日，长安不见使人愁。",
+    "url": "https://baike.baidu.com/item/登金陵凤凰台",
+    "inProgress": true
+  },
+  {
+    "title": "无题·昨夜星辰昨夜风",
+    "author": "唐 - 李商隐",
+    "content": "昨夜星辰昨夜风，画楼西畔桂堂东。\n身无彩凤双飞翼，心有灵犀一点通。\n隔座送钩春酒暖，分曹射覆蜡灯红。\n嗟余听鼓应官去，走马兰台类转蓬。",
+    "url": "https://baike.baidu.com/item/无题二首/4597104",
+    "inProgress": true
+  },
+  {
+    "title": "蜀相",
+    "author": "唐 - 杜甫",
+    "content": "丞相祠堂何处寻，锦官城外柏森森。\n映阶碧草自春色，隔叶黄鹂空好音。\n三顾频烦天下计，两朝开济老臣心。\n出师未捷身先死，长使英雄泪满襟。",
+    "url": "https://baike.baidu.com/item/蜀相/160949",
+    "inProgress": true
+  },
+  {
+    "title": "自嘲",
+    "author": "近代 - 鲁迅",
+    "content": "运交华盖欲何求，未敢翻身已碰头。\n破帽遮颜过闹市，漏船载酒泛中流。\n横眉冷对千夫指，俯首甘为孺子牛。\n躲进小楼成一统，管他冬夏与春秋。",
+    "url": "",
     "inProgress": true
   }
 ];
