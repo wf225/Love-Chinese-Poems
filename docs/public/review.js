@@ -41,8 +41,8 @@ function render(poem) {
 }
 
 // init
-let NUM = 117;
-let poemArray = getReviewList(NUM);
+let poemArray = getReviewList();
+let NUM = poemArray.length;
 let index = 0;
 console.log(poemArray);
 
