@@ -137,8 +137,8 @@ function getTodoList() {
   return result.reverse();
 }
 
-// 获取要最近学习的20首进行复习
-function getReviewList(num) {
+// 获取已学习过的古诗，进行复习
+function getReviewList(num = undefined) {
   var result = Array();
 
   for (i = POEMS.length - 1; i >= 0; i--) {
@@ -146,9 +146,9 @@ function getReviewList(num) {
     if (!item.inProgress) {
       result.push(item);
     }
-    if (result.length >= num) {
-      break;
-    }
+    // if (result.length >= num) {
+    //   break;
+    // }
   }
   return result.reverse();
 }
