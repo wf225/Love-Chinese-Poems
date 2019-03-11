@@ -53,6 +53,12 @@ body{font-family: Sun; background: #FFF;}
   .main-about .tabJob .content ul{padding-left: 0px;}
   .main-about .tabJob .content ul li{font-size: 15px; line-height: 30px; margin-left: 10px;}
   .layui-btn{width: 60px; padding: 0 10px;}
+  code {
+    line-height:250%;
+    letter-spacing:6px;  
+    font-size:1.8rem;
+    font-family:"SimSun";
+  }
 }
 /*小屏幕*/
 @media screen and (min-width: 768px){
