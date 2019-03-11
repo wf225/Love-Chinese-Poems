@@ -53,12 +53,6 @@ body{font-family: Sun; background: #FFF;}
   .main-about .tabJob .content ul{padding-left: 0px;}
   .main-about .tabJob .content ul li{font-size: 15px; line-height: 30px; margin-left: 10px;}
   .layui-btn{width: 60px; padding: 0 10px;}
-  code {
-    line-height:250%;
-    letter-spacing:6px;  
-    font-size:1.8rem;
-    font-family:"SimSun";
-  }
 }
 /*小屏幕*/
 @media screen and (min-width: 768px){
@@ -77,9 +71,6 @@ body{font-family: Sun; background: #FFF;}
   .main-case .content.even{margin-left: 9%;}
   .main-about ul.aboutab li{padding: 0 32px; font-size: 24px; margin-left: 30px; line-height: 50px;}
   .main-about .tabIntro .content p{padding: 0 30px; font-size: 18px; line-height: 30px;}
-  .md-typeset code {
-    letter-spacing:6px;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
   .main.product .content div.right{padding-left: 20px;}
@@ -88,11 +79,17 @@ body{font-family: Sun; background: #FFF;}
 /*大屏幕*/
 @media screen and (min-width: 992px){
   .main-about .tabIntro .content p{padding: 0 50px; font-size: 20px; line-height: 40px;}
+  .md-typeset code {
+    letter-spacing:10px;
+  }
 }
 /*超大屏幕*/
 @media screen and (min-width: 1200px) {
   .main-about .tabCour .timeline li .cour-panel{padding-left: 50px;}
   .main-about .tabCour .timeline li.odd .cour-panel{padding-left: 0; padding-right: 50px;}
+  .md-typeset code {
+    letter-spacing:10px;
+  }
 }
 @media screen and (min-width: 1300px) {
   .layui-container{width: 1200px; padding: 0;}
