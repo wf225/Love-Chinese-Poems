@@ -2,12 +2,12 @@ body {
   font-family:"SimSun";
 }
 
-code {
+/* code {
   line-height:250%;
-  letter-spacing:7px;  
+  letter-spacing:6px;  
   font-size:1.8rem;
   font-family:"SimSun";
-}
+} */
   
 .md-typeset h2 {
   margin:2rem 0 1.6rem;
