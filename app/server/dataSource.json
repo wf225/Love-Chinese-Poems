@@ -1,4 +1,3 @@
-var POEMS = 
 [
   {
     "title": "山村咏怀",
@@ -1372,4 +1371,4 @@ var POEMS =
     "url": "https://so.gushiwen.org/shiwenv_8c19637abf6f.aspx",
     "inProgress": true
   }
-];
+]

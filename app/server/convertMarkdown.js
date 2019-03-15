@@ -149,7 +149,7 @@ function getPoems(markdownPath, outputJSONPath, outputJSPath) {
 
 
 // 读取文件 markdown 文件，转为 json 格式
-const markdownPath = path.join(__dirname, "../../docs/爱上古诗/天乐学古诗.md");
+const markdownPath = path.join(__dirname, "../../docs/爱上古诗/乐学古诗.md");
 const outputJSONPath = path.join(__dirname, "./dataSource.json");
 const outputJSPath = path.join(__dirname, "../../docs/public/js/dataSource.js");
 
