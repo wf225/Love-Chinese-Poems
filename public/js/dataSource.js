@@ -1044,6 +1044,27 @@ var POEMS =
     "inProgress": true
   },
   {
+    "title": "劝学",
+    "author": "唐 - 颜真卿",
+    "content": "三更灯火五更鸡，正是男儿读书时。\n黑发不知勤学早，白首方悔读书迟。",
+    "url": "https://baike.baidu.com/item/劝学/2587726",
+    "inProgress": true
+  },
+  {
+    "title": "闻王昌龄左迁龙标遥有此寄",
+    "author": "唐 - 李白 [古诗文网](https://so.gushiwen.org/shiwenv_62280919c9c5.aspx)",
+    "content": "杨花落尽子规啼，闻道龙标过五溪。\n我寄愁心与明月，随风直到夜郎西。",
+    "url": "https://baike.baidu.com/item/闻王昌龄左迁龙标遥有此寄/2806510",
+    "inProgress": true
+  },
+  {
+    "title": "夜雨寄北",
+    "author": "唐代: 李商隐",
+    "content": "君问归期未有期，巴山夜雨涨秋池。\n何当共剪西窗烛，却话巴山夜雨时。",
+    "url": "https://so.gushiwen.org/shiwenv_e46c43d13b97.aspx",
+    "inProgress": true
+  },
+  {
     "title": "清平乐·六盘山",
     "author": "现代 - 毛泽东",
     "content": "天高云淡，望断南飞雁。\n不到长城非好汉，屈指行程二万。\n六盘山上高峰，红旗漫卷西风。\n今日长缨在手，何时缚住苍龙？",
@@ -1079,45 +1100,24 @@ var POEMS =
     "inProgress": true
   },
   {
-    "title": "劝学",
-    "author": "唐 - 颜真卿",
-    "content": "三更灯火五更鸡，正是男儿读书时。\n黑发不知勤学早，白首方悔读书迟。",
-    "url": "https://baike.baidu.com/item/劝学/2587726",
-    "inProgress": true
-  },
-  {
     "title": "画鸡",
-    "author": "明代：唐寅",
+    "author": "明代 - 唐寅",
     "content": "头上红冠不用裁，满身雪白走将来。\n平生不敢轻言语，一叫千门万户开。",
     "url": "https://baike.baidu.com/item/画鸡",
     "inProgress": true
   },
   {
     "title": "观沧海",
-    "author": "两汉: 曹操",
+    "author": "两汉 - 曹操",
     "content": "东临碣石，以观沧海。\n水何澹澹，山岛竦峙。\n树木丛生，百草丰茂。\n秋风萧瑟，洪波涌起。\n日月之行，若出其中；\n星汉灿烂，若出其里。\n幸甚至哉，歌以咏志。",
     "url": "https://so.gushiwen.org/shiwenv_630c04c81858.aspx",
     "inProgress": true
   },
   {
     "title": "题破山寺后禅院",
-    "author": "唐代: 常建",
+    "author": "唐代 - 常建",
     "content": "清晨入古寺，初日照高林。\n曲径通幽处，禅房花木深。\n山光悦鸟性，潭影空人心。\n万籁此俱寂，但余钟磬音。",
     "url": "https://so.gushiwen.org/shiwenv_e2890c61279c.aspx",
-    "inProgress": true
-  },
-  {
-    "title": "闻王昌龄左迁龙标遥有此寄",
-    "author": "唐 - 李白 [古诗文网](https://so.gushiwen.org/shiwenv_62280919c9c5.aspx)",
-    "content": "杨花落尽子规啼，闻道龙标过五溪。\n我寄愁心与明月，随风直到夜郎西。",
-    "url": "https://baike.baidu.com/item/闻王昌龄左迁龙标遥有此寄/2806510",
-    "inProgress": true
-  },
-  {
-    "title": "夜雨寄北",
-    "author": "唐代: 李商隐",
-    "content": "君问归期未有期，巴山夜雨涨秋池。\n何当共剪西窗烛，却话巴山夜雨时。",
-    "url": "https://so.gushiwen.org/shiwenv_e46c43d13b97.aspx",
     "inProgress": true
   },
   {
@@ -1129,7 +1129,7 @@ var POEMS =
   },
   {
     "title": "如梦令",
-    "author": "宋代: 李清照",
+    "author": "宋代 - 李清照",
     "content": "常记溪亭日暮，沉醉不知归路。\n兴尽晚回舟，误入藕花深处。\n争渡，争渡，惊起一滩鸥鹭。",
     "url": "https://so.gushiwen.org/shiwenv_3e33bfbb8f79.aspx",
     "inProgress": true
