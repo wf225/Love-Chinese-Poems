@@ -1,15 +1,21 @@
 # iABC 资源库
 
-> ![爱上古诗](爱上古诗/images/爱上古诗.jpg)  
+## How to start
 
-## 1. 爱上古诗
+### 1. [Installing MkDocs](https://www.mkdocs.org)
 
-#### 唐诗，宋诗，汉乐府，北朝民歌
-> 1.[唐诗](爱上古诗/唐诗.md)  
-> 2.[宋词](爱上古诗/宋词.md)  
-> 3.[乐府民歌](爱上古诗/乐府民歌.md)  
+```
+$ pip install mkdocs
+```
 
-## 2. 视频资料
+### 2. Start local server
 
-> 1.[唐朝诗坛](videos/01唐朝诗坛.md)  
-> 2.[宋朝文学](videos/02宋朝文学.md)  
+```
+npm run start
+```
+
+### 3. Deploy to your github
+
+```
+npm run deploy
+```
