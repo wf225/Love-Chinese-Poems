@@ -1,0 +1,168 @@
+## JavaScript 常见内存泄露方式
+## 及如何避免
+
+
+
+## Javascript 垃圾回收机制
+
+```
+let arr = [1, 2, 3, 4];
+console.log('hello world');
+arr = null;
+
+// arr重置为null，就解除了对[1, 2, 3, 4]的引用，引用次数变成了0，内存就可以释放出来了。
+```
+
+
+
+## 常见 JavaScript 内存泄露
+
+
+### 1. 意外的全局变量
+
+``` js
+function foo(arg) { 
+  bar = "this is a hidden global variable"; 
+} 
+```
+
+真相是：
+
+``` js
+function foo(arg) { 
+  window.bar = "this is an explicit global variable"; 
+} 
+```
+
+
+另一种意外的全局变量可能由 this 创建：
+
+``` js
+function foo() { 
+  this.variable = "potential accidental global"; 
+} 
+ 
+// Foo 调用自己，this 指向了全局对象（window）
+foo(); 
+```
+
+
+
+### 解决方案："use strict" (严格模式声明)
+
+``` js
+"use strict";
+x = 3.14; // 报错 (x 未定义)
+```
+
+
+``` js
+"use strict";
+myFunction();
+function myFunction() {
+  y = 3.14; // 报错 (y 未定义)
+}
+```
+
+
+``` js
+x = 3.14; // 不报错  
+myFunction();
+function myFunction() {
+  "use strict";
+  y = 3.14; // 报错 (y 未定义)
+}
+```
+
+
+
+### 2. 被遗忘的计时器或回调函数
+
+``` js
+var someResource = getData(); 
+setInterval(function() { 
+  var node = document.getElementById('Node'); 
+  if(node) { 
+    // 处理 node 和 someResource 
+    node.innerHTML = JSON.stringify(someResource)); 
+  } 
+}, 1000); 
+```
+
+
+### 解决方案：addEventListener
+
+``` js
+var element = document.getElementById('button'); 
+function onClick(event) { 
+  element.innerHTML = 'text'; 
+} 
+
+element.addEventListener('click', onClick); 
+```
+
+
+
+### 3. 脱离 DOM 的引用
+
+``` js
+var elements = { 
+  button: document.getElementById('button'), 
+  image: document.getElementById('image'), 
+  text: document.getElementById('text') 
+};
+ 
+function removeButton() { 
+  // 按钮是 body 的后代元素 
+  document.body.removeChild(document.getElementById('button')); 
+ 
+  // 此时，仍旧存在一个全局的 #button 的引用 
+  // elements 字典。button 元素仍旧在内存中，不能被 GC 回收。 
+} 
+```
+
+
+
+### 4. 闭包
+
+``` js
+var theThing = null; 
+var replaceThing = function () {
+  var originalThing = theThing;
+  
+  var unused = function () { 
+    if (originalThing) 
+      console.log("hi"); 
+  }; 
+ 
+  theThing = {
+    longStr: new Array(1000000).join('*'), 
+    someMethod: function () { 
+      console.log(someMessage); 
+    } 
+  };
+  
+  // 解决方案
+  originalThing = null;
+}; 
+ 
+setInterval(replaceThing, 1000); 
+```
+
+
+
+## Chrome 内存剖析工具
+Timeline 和 Profiles
+
+
+### Timeline
+
+<img src="images/javascript-memory-leak/chrome-timeline.png" />
+
+
+### Profiles
+
+<img src="images/javascript-memory-leak/chrome-profiles.png" />
+
+
+### [Demo](js-memory-demo.html)
