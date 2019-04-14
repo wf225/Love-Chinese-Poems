@@ -1,0 +1,38 @@
+<html>
+<title>js内存测试</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+  <div id="nodes">nodes</div>
+
+  <button onclick="start()">Start</button>
+
+  <script>
+    // var xArr = [];
+
+    function createSomeNodes() {
+      var div,
+        i = 100,
+        frag = document.createDocumentFragment();
+      for (; i > 0; i--) {
+        div = document.createElement("div");
+        div.appendChild(document.createTextNode(i + " - " + new Date().toTimeString()));
+        frag.appendChild(div);
+      }
+      document.getElementById("nodes").appendChild(frag);
+    }
+
+    function grow() {
+      let xArr = [];
+      xArr.push(new Array(1000000).join('xyz'));
+      createSomeNodes();
+      // setTimeout(grow, 1000);
+    }
+
+    function start() {
+      setInterval(grow, 1000);
+    }
+    
+  </script>
+</body>
+
+</html>
