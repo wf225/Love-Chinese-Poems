@@ -1,8 +1,16 @@
+<style>
+  img {
+    width:200px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>
+
 # iABC 学习资源
 
 ## 乐学古诗
 
-![乐学古诗](爱上古诗/images/爱上古诗.jpg)  
+![乐学古诗](自然科学/images/二十四节气/春晓2.jpg)  
 
 ### 诗词题库:
   - [闯关答题](public/index.md)
@@ -21,3 +29,16 @@
   - [唐诗三百](爱上古诗/唐诗三百.md)
   - [宋词三百](爱上古诗/宋词三百.md)
   - [宋词精选](爱上古诗/宋词精选.md)
+
+
+## 自然科学:
+  - [二十四节气](自然科学/二十四节气.md)
+  - [认识秋天的植物](自然科学/认识秋天的植物.md)
+  - [认识春天的植物](自然科学/认识春天的植物.md)    
+    
+## 少儿编程:
+  - [microbit](少儿编程/microbit/index.md)
+
+### Tinkercad:
+  - [Codeblocks](少儿编程/tinkercad_codeblocks/index.md)
+  - [Circuits](少儿编程/tinkercad_circuits/index.md)
