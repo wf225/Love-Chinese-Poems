@@ -1,7 +1,15 @@
 <style>
+  body {
+    font-family: "SimSun"
+  }
   img {
     width:600px; 
     height:400px
+  }
+  .reveal code {
+    font-size: 130%;
+    line-height: 2.0;
+    text-align: center;
   }
 </style>
 
