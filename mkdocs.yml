@@ -1,4 +1,8 @@
-site_name: iABC 学习资源
+# Project information
+site_name: 'iABC'
+site_description: 'iABC 学习资源'
+site_author: 'Bill Wu'
+site_url: 'https://iabc.tech/iABC/'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 - 2019 iABC'
@@ -29,7 +33,8 @@ nav:
     - '二十四节气': '自然科学/二十四节气.md'
     - '认识秋天的植物': '自然科学/认识秋天的植物.md'
     - '认识春天的植物': '自然科学/认识春天的植物.md'
-    - '水母': '自然科学/水母.md'   
+    - '水母': '自然科学/水母.md'
+    - '蝴蝶的演变': '自然科学/蝴蝶的演变.md'
     
   - 少儿编程:
     - 'microbit': '少儿编程/microbit/index.md'
@@ -42,6 +47,7 @@ nav:
 
 theme:
   name: 'material'
+  language: 'zh'
   palette:
     primary: 'blue'
     accent: 'indigo'
@@ -52,7 +58,17 @@ theme:
   search:
     language: 'en, zh'
     tokenizer: '[\s\-\.]+'
-  language: 'zh'
+  # feature:
+  #   tabs: true
+
+# extra:
+#   social:
+#     - type: 'github'
+#       link: 'https://github.com/squidfunk'
+#     - type: 'twitter'
+#       link: 'https://twitter.com/squidfunk'
+#     - type: 'linkedin'
+#       link: 'https://linkedin.com/in/squidfunk'
 
 extra_css:
   - css/extra.css
