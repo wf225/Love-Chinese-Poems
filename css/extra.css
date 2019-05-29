@@ -5,8 +5,11 @@ body {
 code {
   line-height:250%;
   letter-spacing:6px;  
-  font-size:1.8rem;
   font-family:"SimSun";
+}
+
+.md-typeset pre>code {
+  font-size:1.6rem;
 }
   
 .md-typeset h2 {
