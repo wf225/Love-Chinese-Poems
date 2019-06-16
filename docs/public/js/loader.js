@@ -105,8 +105,15 @@ function getQuestions(number) {
     number = POEMS.length;
   }
 
+  const donePoems = [];
+  POEMS.forEach(item => {
+    if (!item.inProgress) {
+      donePoems.push(item);
+    }
+  });
+
   do {
-    const topic = getRandomTopic(POEMS);
+    const topic = getRandomTopic(donePoems);
     try {
       if (indexArr.indexOf(topic.index) === -1) {
         result.push(topic);
