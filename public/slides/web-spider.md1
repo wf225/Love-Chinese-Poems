@@ -1,0 +1,249 @@
+<style>
+  body {
+    font-family: "SimSun"
+  }
+  img {
+    width:800px; 
+    height:600px
+  }
+  .reveal code {
+    font-size: 100%;
+    line-height: 1.2;
+    text-align: left;
+  }
+</style>
+
+## NodeJS 爬虫入门
+
+<img src="images/web-spider/01.jpg" />
+
+
+
+## 什么是网络爬虫
+
+[百度百科](https://baike.baidu.com/item/网络爬虫)
+
+```
+网络爬虫（又被称为网页蜘蛛，网络机器人），
+是一种按照一定的规则，自动地抓取万维网信息的程序或者脚本。
+另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。
+```
+
+
+
+## 网络爬虫的分类
+
+按照系统结构和实现技术分为以下几种类型：
+- 通用网络爬虫（General Purpose Web Crawler）
+- 聚焦网络爬虫（Focused Web Crawler）
+- 增量式网络爬虫（Incremental Web Crawler）
+- 深层网络爬虫（Deep Web Crawler）
+
+
+
+## node做爬虫的优势
+
+- 他的驱动语言是JavaScript。  
+  JavaScript在nodejs诞生之前是运行在浏览器上的脚本语言，其优势就是对网页上的dom元素进行操作，在网页操作上这是别的语言无法比拟的。
+
+- nodejs 是单线程异步的。  
+  JS里有事件池，CPU会在事件池循环处理已经响应的事件，未处理完的事件不会放到事件池里，因此不会阻塞后续的操作。在爬虫上这样的优势就是在并发爬取页面上，一个页面未返回不会阻塞后面的页面继续加载，要做到这个不用像python那样需要多线程。
+
+
+## node的劣势
+
+- 数据处理上的劣势，这点是不如python。  
+  如果只是单纯的爬数据，用node当然很好，但是如果用爬来的数据继续做统计分析，做个回归分析聚类啥的话，那就不能用node一步到底了。
+
+
+
+## 我为什么需要网络爬虫？
+
+
+<img src="images/web-spider/02.png" />
+
+
+<img src="images/web-spider/03.png" />
+
+
+
+## 1. 静态页面爬虫
+
+
+### 抓取 HTML 内容
+
+```
+const axios = require("axios"); // axios
+
+async function httpGet2(url) {
+  return new Promise((resolve, reject) => {
+    axios.get(url)
+      .then(function (response) {
+        if (response.status === 200) {
+          resolve(response.data);
+        }
+      })
+      .catch(function (err) {
+        console.log(err);
+        reject(err);
+      });
+  });
+}
+```
+
+
+### 保存数据
+
+```
+const fs = require("fs"); // fs
+const path = require("path");
+
+function save(filePath, data) {
+  let encoding = "utf-8";
+  let dir = path.dirname(filePath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
+
+  try {
+    const objType = Object.prototype.toString.call(data);
+    if (objType === "[object Array]") {
+      data = JSON.stringify(data, null, 2);
+    }
+    fs.writeFileSync(filePath, data, encoding);
+    console.log("save success: " + filePath);
+  } catch (err) {
+    throw err;
+  }
+}
+```
+
+
+### 解析数据
+
+```
+const cheerio = require("cheerio"); // cheerio
+const HOST = "https://so.gushiwen.org";
+const catalogsPath = path.join(__dirname, "catalogs.json");
+
+function getCatalogs() {
+  let filePath = path.join(__dirname, "xiaoxue.html");
+  let strHtml = fs.readFileSync(filePath, { encoding: "utf-8" });
+  let $ = cheerio.load(strHtml, { decodeEntities: false });
+
+  let catalogs = $("div[class=cont]").last().children();
+  let result = [];
+  catalogs.each(function (i, e) {
+    const href = $(e).attr("href");
+    const catalogName = $(e).html().trim();
+
+    result.push({
+      name: catalogName,
+      url: href
+    });
+  });
+
+  fs.writeFileSync(catalogsPath, JSON.stringify(result, null, 2));
+}
+
+```
+
+
+### 抓取第 N 层 HTML 内容
+
+
+### 解析、提取数据
+
+
+
+## 注意事项
+
+- 控制并发数：计算机性能
+- 设置延迟时间：防止404
+- 查重：已下载的跳过
+
+
+
+## 2. 动态页面爬虫 (客户端渲染)
+
+<img src="images/web-spider/02.png" />
+
+
+### 如何在客户端渲染页面？
+
+
+### webdriverio
+
+
+### 渲染
+
+```
+var browser = webdriverio.remote(options).init(); // webdriverio
+browser.url(web_url);
+
+browser
+  .getTitle().then(function (title) {
+    vodeoTitle = title.substr(0, title.lastIndexOf("_"));
+  })
+  .getAttribute("video", "src").then(function(att) {
+    videoSrc = att;
+  })
+  .end().then(() => {
+    console.log(vodeoTitle);
+    console.log(videoSrc);
+    download(videoSrc, output_path)
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
+```
+
+
+## 下载 HTML 内容
+
+```
+const https = require("https"); // https
+// const http = require("http");
+const fs = require("fs");
+
+var download = function(url, dest, cb) {
+  var file = fs.createWriteStream(dest);
+  https.get(url, function(response) {
+    response.pipe(file);
+    file.on('finish', function() {
+      file.close(cb);
+    });
+  }).on('error', function(err) {
+    fs.unlink(dest); // Delete the file async. (But we don't check the result)
+    if (cb) cb(err.message);
+  });
+};
+```
+
+
+## 解析 HTML 内容
+
+```
+var DOMParser = require('xmldom').DOMParser; // xmldom
+let parser = new DOMParser();
+let element = parser.parseFromString(item.toString()).documentElement;
+let video_src = element.getAttribute("href"); // video_src
+let video_title = element.textContent;
+```
+
+
+## 下载所需资源：video
+
+
+
+## 注意事项
+
+- 控制并发数
+- 设置延迟时间
+- 查重
+
+
+
+Q & A
+
+腹有诗书气自华，最是书香能致远
