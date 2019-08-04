@@ -39,6 +39,7 @@ nav:
     
   - 少儿编程:
     - 'microbit': '少儿编程/microbit/index.md'
+    - '机器人等级考试': '少儿编程/等级考试/机器人等级考试.md'
 
     - 'Tinkercad':
       - 'Codeblocks': '少儿编程/tinkercad_codeblocks/index.md'
