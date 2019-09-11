@@ -1004,7 +1004,7 @@ var POEMS =
   {
     "title": "大风歌",
     "author": "两汉：刘邦",
-    "content": "大风起兮云飞扬，\n威加海内兮归故乡，\n安得猛士兮守四方！",
+    "content": "大风起兮云飞扬，威加海内兮归故乡，安得猛士兮守四方！",
     "url": "https://baike.baidu.com/item/大风歌/14542",
     "inProgress": false
   },
