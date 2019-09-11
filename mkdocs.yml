@@ -9,15 +9,15 @@ copyright: 'Copyright &copy; 2018 - 2019 iABC'
 
 nav:
 # pages:
-  - 主页: 'index.md'
+  - '主页': 'index.md'
 
-  - 诗词题库:
+  - '诗词题库':
     - '闯关答题': 'public/index.md'
     - '本周学习': 'public/todo.md'
     - '复习回顾': 'public/review.md'
     - '飞花令': 'public/feihua.md'
 
-  - 爱上古诗:
+  - '爱上古诗':
     - '乐学古诗': '爱上古诗/乐学古诗.md'
     - '乐学宋词': '爱上古诗/乐学宋词.md'
     - '小学必背(新版)': '爱上古诗/小学必背(新版).md'
@@ -30,14 +30,14 @@ nav:
     - '宋词三百': '爱上古诗/宋词三百.md'
     - '宋词精选': '爱上古诗/宋词精选.md'
 
-  - 科学探究:
+  - '科学探究':
     - '认识秋天的植物': '科学探究/认识秋天的植物.md'    
     - '认识春天的植物': '科学探究/认识春天的植物.md'
     - '二十四节气': '科学探究/二十四节气.md'    
     - '水母': '科学探究/水母.md'
     - '蝴蝶的演变': '科学探究/蝴蝶的演变.md'
     
-  - 机器人编程:
+  - '机器人编程':
     - '等级考试': '机器人编程/等级考试/README.md'
 
     - 'L04':
@@ -72,7 +72,7 @@ nav:
       - 'Codeblocks': '机器人编程/tinkercad_codeblocks/index.md'
       - 'Circuits': '机器人编程/tinkercad_circuits/index.md'
 
-  - About: 'about.md'
+  - '关于我们': 'about.md'
 
 theme:
   name: 'material'
