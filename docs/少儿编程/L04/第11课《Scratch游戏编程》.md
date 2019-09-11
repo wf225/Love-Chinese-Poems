@@ -1,78 +1,71 @@
 <!-- # 机器人编程入门学习 -->
-<style>
-  .width150 {
-      width: 150px;
-  }
-  .width300 {
-      width: 300px;
-  }
-  .width600 {
-      width: 600px;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="./style.css" />
 
 # 第11课《Scratch游戏编程》
 
-## 内容简介:
+## 内容简介
+
 使用 Scratch 编程实现一个类似切水果的小游戏。
 
-## 教学目标:
+## 教学目标
+
 1. 介绍什么是Scratch编程语言;
 1. 复习慧编程界面上的基本功能模块;
 1. 学习舞台，掌握坐标;
-1. 学习使用Scratch控制虚拟角色的运动; 
+1. 学习使用Scratch控制虚拟角色的运动;
 1. 实现一个类似切水果的小游戏。
 
-## 预备知识:
+## 预备知识
+
 1. 了解条件积木的使用;
 1. 知道如何寻找 Bug 并进行 Debug。
 
-
-## 教学过程:
+## 教学过程
 
 ### 1. 旧知识回顾
+
 - 前面十节课，我们学习了使用代码块编程操控程小奔，使用了循环、条件、变量等代码块。
 - 这些代码块其实都是 Scratch 编程语言。
 - 慧编程是我们使用的编程工具，程小奔只是慧编程支持的设备中的一个。
 
 ### 2. 新知识讲解
+
 - 提问：慧编程上面的熊猫是什么？
 
 - 舞台大小
-    - 舞台是一个坐标系，如图所示，横向从-240到240; 纵向从 -180到180; 因此舞台的横向距离为480，纵向距离为360。
+  - 舞台是一个坐标系，如图所示，横向从-240到240; 纵向从 -180到180; 因此舞台的横向距离为480，纵向距离为360。
 
-      <img src="./images/11-1.png" class="width600" />
+    <img src="../images/11-1.png" class="width600" />
 
-    - 横纵交叉点就是舞台中心，横轴x表示，纵轴y表示。
+  - 横纵交叉点就是舞台中心，横轴x表示，纵轴y表示。
 
 - 角色
 
-  <img src="./images/11-3.png" class="width600" />
-  <img src="./images/11-2.png" class="width600" />
+  <img src="../images/11-3.png" class="width600" />
+  <img src="../images/11-2.png" class="width600" />
 
 - 背景
 
-  <img src="./images/11-4.png" class="width300" />
+  <img src="../images/11-4.png" class="width300" />
 
 - 脚本  
   选中角色后，就可以给角色(或背景)写脚本了。
-
 
 ### 3. 项目挑战
 
 - 任务1：添加脚本让角色动起来，点击角色发出声音
   - 让学生尝试使用不同的声音，或自己录音 (注：ipad 不支持录音)
 
-    <img src="./images/11-5.png" class="width600" />
+    <img src="../images/11-5.png" class="width600" />
 
 - 任务2：天上掉水果
   - 教师重点介绍 y 轴坐标的变化特点
   
-    <img src="./images/11-6.png" class="width300" />
+    <img src="../images/11-6.png" class="width300" />
 
 - 任务3：如何增大游戏的难度？水果总是从同一个地方掉下
   - 改变 x 轴坐标的值，提示：使用随机数
-    
-    <img src="./images/11-7.png" class="width300" />
+
+    <img src="../images/11-7.png" class="width300" />
 
 - 同学们相互交换，体验对方编写的游戏。
