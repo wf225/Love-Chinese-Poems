@@ -39,13 +39,13 @@
 - [认识秋天的植物](科学探究/认识秋天的植物.md)
 - [认识春天的植物](科学探究/认识春天的植物.md)
 
-## 少儿编程
+## 机器人编程
 
-- [等级考试](少儿编程/等级考试/README.md)
-- [L04](少儿编程/L04/README.md)
-- [L05](少儿编程/L05/README.md)
+- [等级考试](机器人编程/等级考试/README.md)
+- [L04](机器人编程/L04/README.md)
+- [L05](机器人编程/L05/README.md)
 
 ### Tinkercad
 
-- [Codeblocks](少儿编程/tinkercad_codeblocks/index.md)
-- [Circuits](少儿编程/tinkercad_circuits/index.md)
+- [Codeblocks](机器人编程/tinkercad_codeblocks/index.md)
+- [Circuits](机器人编程/tinkercad_circuits/index.md)

@@ -21,42 +21,42 @@
 
 - [中国电子学会](https://www.cie.org.cn)
 
-  <img src="../images/机器人等级考试-01.png" class="width800" />
+  <img src="./images/机器人等级考试-01.png" class="width800" />
 
 ## [青少年科技类等级考试](http://www.kpcb.org.cn/h-col-127.html)
 
-  - <img src="../images/A-01.png" class="width300" />
-  - <img src="../images/A-02.png" class="width300" />
-  - <img src="../images/A-03.png" class="width300" />
-  - <img src="../images/A-04.png" class="width300" />
+  - <img src="./images/A-01.png" class="width300" />
+  - <img src="./images/A-02.png" class="width300" />
+  - <img src="./images/A-03.png" class="width300" />
+  - <img src="./images/A-04.png" class="width300" />
 
 # 机器人等级考试
 
 ### [考试介绍](http://www.qceit.org.cn/bos/20190408204005293.html?d=2019-8-21-11-55-26)
   
-  <img src="../images/C01.png" class="width600" />
+  <img src="./images/C01.png" class="width600" />
 
-  <img src="../images/C03-A.png" class="width600" />
+  <img src="./images/C03-A.png" class="width600" />
 
-  <img src="../images/C03-B.png" class="width600" />
+  <img src="./images/C03-B.png" class="width600" />
 
-  <img src="../images/C03-C.png" class="width600" />
+  <img src="./images/C03-C.png" class="width600" />
 
-  <img src="../images/C03-D.png" class="width600" />
+  <img src="./images/C03-D.png" class="width600" />
 
-  <img src="../images/C03-E.png" class="width600" />
+  <img src="./images/C03-E.png" class="width600" />
 
-  <img src="../images/C03-F.png" class="width600" />
+  <img src="./images/C03-F.png" class="width600" />
 
 ### 机器人等级考试官网 [http://www.qceit.org.cn](http://www.qceit.org.cn)
 
-  <img src="../images/A-06.png" class="width600" />
+  <img src="./images/A-06.png" class="width600" />
 
 ### [机器人技术等级考试标准](http://9140106.s21d-9.faiusrd.com/0/ABUIABA9GAAgssi44AUovMH3ywI?f=全国青少年机器人技术等...pdf&v=1544430642)
 
-  <img src="../images/C02-A.png" class="width600" />
+  <img src="./images/C02-A.png" class="width600" />
 
-  <img src="../images/C02-B.png" class="width600" />
+  <img src="./images/C02-B.png" class="width600" />
 
 ### [模拟题-下载](http://www.robotest.cn/article/index-19.html)
 
@@ -74,7 +74,7 @@
 
 - 考试时间
 
-  - <img src="../images/B-02.png" class="width600" />
+  - <img src="./images/B-02.png" class="width600" />
 
 ### [模拟题-下载](http://bc.yaie.net/article/index-40.html)
 
@@ -88,20 +88,20 @@
 
 - [信息学奥赛-百科介绍](https://baike.baidu.com/item/信息学奥赛/1147921)
 
-  <img src="../images/信息学奥数A.JPG" class="width600" />
+  <img src="./images/信息学奥数A.JPG" class="width600" />
 
-  <img src="../images/信息学奥数B.JPG" class="width600" />
+  <img src="./images/信息学奥数B.JPG" class="width600" />
   
 # iabc 机器人编程课程体系
 
-<img src="../images/D01-A.png" class="width600" />
+<img src="./images/D01-A.png" class="width600" />
 
-<img src="../images/D01-D.png" class="width600" />
+<img src="./images/D01-D.png" class="width600" />
 
-<img src="../images/D01-C.png" class="width600" />
+<img src="./images/D01-C.png" class="width600" />
 
-<img src="../images/D01-B.png" class="width600" />
+<img src="./images/D01-B.png" class="width600" />
 
 ## 课堂花絮
 
-<img src="../images/E01.gif" class="width600" />
+<img src="./images/E01.gif" class="width600" />
