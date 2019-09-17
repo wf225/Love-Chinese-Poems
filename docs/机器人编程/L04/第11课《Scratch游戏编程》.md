@@ -35,18 +35,18 @@
 - 舞台大小
   - 舞台是一个坐标系，如图所示，横向从-240到240; 纵向从 -180到180; 因此舞台的横向距离为480，纵向距离为360。
 
-    <img src="../images/11-1.png" class="width600" />
+    <img src="./images/11-1.png" class="width600" />
 
   - 横纵交叉点就是舞台中心，横轴x表示，纵轴y表示。
 
 - 角色
 
-  <img src="../images/11-3.png" class="width600" />
-  <img src="../images/11-2.png" class="width600" />
+  <img src="./images/11-3.png" class="width600" />
+  <img src="./images/11-2.png" class="width600" />
 
 - 背景
 
-  <img src="../images/11-4.png" class="width300" />
+  <img src="./images/11-4.png" class="width300" />
 
 - 脚本  
   选中角色后，就可以给角色(或背景)写脚本了。
@@ -56,16 +56,16 @@
 - 任务1：添加脚本让角色动起来，点击角色发出声音
   - 让学生尝试使用不同的声音，或自己录音 (注：ipad 不支持录音)
 
-    <img src="../images/11-5.png" class="width600" />
+    <img src="./images/11-5.png" class="width600" />
 
 - 任务2：天上掉水果
   - 教师重点介绍 y 轴坐标的变化特点
   
-    <img src="../images/11-6.png" class="width300" />
+    <img src="./images/11-6.png" class="width300" />
 
 - 任务3：如何增大游戏的难度？水果总是从同一个地方掉下
   - 改变 x 轴坐标的值，提示：使用随机数
 
-    <img src="../images/11-7.png" class="width300" />
+    <img src="./images/11-7.png" class="width300" />
 
 - 同学们相互交换，体验对方编写的游戏。

@@ -41,18 +41,18 @@
 
 - 上节课是利用条件和循环积木帮助程小奔驶出维修站，今天，程小奔在比赛过程中要经过一段迷宫:
 
-  <img src="../images/11-1.jpg" class="width600" />
+  <img src="./images/11-1.jpg" class="width600" />
 
 - 教师引导:
   - 1.走迷宫的基本算法：碰到出口，沿着同一方向转弯。
   - 2.如何编写一个程序能够帮助程小奔顺利找到迷宫的出口呢？
   - 教师提示，为大家提供了以下三种积木，每种积木数量随意使用。
 
-    <img src="../images/10-2.png" class="width300" />
+    <img src="./images/10-2.png" class="width300" />
 
   - 使用(无限)循环积木让程序变得更加简洁。
     
-    <img src="../images/10-3.png" class="width300" />
+    <img src="./images/10-3.png" class="width300" />
 
 ### 3. 项目挑战
 
@@ -70,10 +70,10 @@
 
   1. 继续重复第 2 步，直到走出迷宫出口；
 
-    <!-- <img src="../images/10-4.png" class="width600" /> -->
+    <!-- <img src="./images/10-4.png" class="width600" /> -->
 
   - 提示：在旋转的时候，要么一直左转，要么一直右转，这一点很重要！
 
   - 建议程序：
 
-    <!-- <img src="../images/10-5.png" class="width300" /> -->
+    <!-- <img src="./images/10-5.png" class="width300" /> -->

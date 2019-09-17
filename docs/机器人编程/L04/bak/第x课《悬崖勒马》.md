@@ -42,11 +42,11 @@
   - 你希望的智能家居能帮你做哪些事情？
 
     TODO：配图-智能家居
-    <!-- <img src="../images/10-1.png" class="width600" /> -->
+    <!-- <img src="./images/10-1.png" class="width600" /> -->
 
 - 回顾程小奔结构：
 
-  <img src="../images/1-6-b.png" class="width600" />
+  <img src="./images/1-6-b.png" class="width600" />
 
 - 光线传感器的作用
 

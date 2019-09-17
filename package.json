@@ -7,10 +7,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "npm run genDataSource && mkdocs build --clean",
-    "deploy": "npm run genDataSource && mkdocs gh-deploy --clean",
+    "build": "yarn genDataSource && mkdocs build --clean",
+    "deploy": "yarn genDataSource && yarn replaceImageScrForMkdocs && mkdocs gh-deploy --clean && yarn replaceImageScrForGithub",
     "start": "mkdocs serve",
-    "genDataSource": "cd app && npm run build"
+    "genDataSource": "cd app && yarn build",
+    "replaceImageScrForMkdocs": "node ./app/server/replaceImageSrcFor mkdocs",
+    "replaceImageScrForGithub": "node ./app/server/replaceImageSrcFor github"
   },
   "repository": {
     "type": "git",
