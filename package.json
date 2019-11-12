@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "yarn genDataSource && mkdocs build --clean",
-    "deploy": "yarn genDataSource && yarn replaceImageScrForMkdocs && mkdocs gh-deploy --clean && yarn replaceImageScrForGithub",
+    "deploy": "yarn genDataSource && mkdocs gh-deploy --clean",
     "start": "mkdocs serve",
     "genDataSource": "cd app && yarn build",
     "replaceImageScrForMkdocs": "node ./app/server/replaceImageSrcFor mkdocs",
