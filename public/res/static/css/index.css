@@ -33,8 +33,9 @@ body{font-family: Sun; background: #FFF;}
 .main-about .tabJob, .main-about .tabCour{display: block;}
 /*招贤纳士*/
 .main-about .tabJob .content{padding: 0 0 20px 0px; border: 1px solid #e2e2e2; border-top: 4px solid #65d0c5; margin-top: 20px;}
-.main-about .tabJob .content:first-child{margin-top: 10px;}
-.main-about .tabJob .content p{line-height: 40px;}
+/* .main-about .tabJob .content:first-child{margin-top: 10px;}
+.main-about .tabJob .content p{line-height: 40px;} */
+.section{display: inline-block;vertical-align: top;background-color: rgba(222, 223, 190, 0.12);width: 100%;box-shadow: rgba(192, 192, 178, 0.41) 0px 0px 5px;padding: 10px;border-width: 0px;border-radius: 6px;border-style: none;border-color: rgb(62, 62, 62);overflow: hidden;box-sizing: border-box;text-align: center;}
 .main-about .tabJob .content ul{padding-left: 20px; list-style-type: none; counter-reset: sectioncounter;}
 .main-about .tabJob .content ul li{color: #000000; font-size: 22px; line-height: 40px;}
 /* .main-about .tabJob .content ul li:before {content: counter(sectioncounter) "、"; counter-increment: sectioncounter;} */
