@@ -66,16 +66,18 @@ body{font-family: Sun; background: #FFF;}
 }
 .section article{
   margin-top: -20px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2.0;
   text-align: center;
   font-family: "SimSun";
 }
 .section article .title{
-  font-size: 18px; color: rgb(255, 129, 36); font-weight:bold;
+  font-size: 20px;
+  color: rgb(255, 129, 36);
+  font-weight:bold;
 }
 .section article .author{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
