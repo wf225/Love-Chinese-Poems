@@ -72,9 +72,11 @@
             {{# } }}
           </p>
           <p class="author">{{ d.author }}</p>
+          <!-- contentList -->
           {{#  layui.each(d.contentList, function(index, item){ }}
           <p>{{ item }}</p>
           {{#  }); }}
+          <!-- contentList is empty -->
           {{#  if(d.contentList.length === 0){ }}
             无数据
           {{#  } }}
