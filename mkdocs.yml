@@ -16,6 +16,7 @@ nav:
     - '本周学习': 'public/todo.md'
     - '复习回顾': 'public/review.md'
     - '飞花令': 'public/feihua.md'
+    - '打印': 'public/print.html'
 
   - '爱上古诗':
     - '乐学古诗': '爱上古诗/乐学古诗.md'

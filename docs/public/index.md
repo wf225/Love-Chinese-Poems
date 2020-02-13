@@ -58,20 +58,28 @@
 
   <script id="poemView" type="text/html">
     <section class="section">
-      <p style="box-sizing: border-box;"><strong>
-        {{# if(d.url === ""){ }}
-          <a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a>
-        {{# }else{ }}
-          <a style="color: #0000ff" href ="{{ d.url }}" target="_blank">{{ d.title }}</a>
-        {{# } }}
-      </strong></p>
-      <p style="box-sizing: border-box;">{{ d.author }}</p>
-      {{#  layui.each(d.contentList, function(index, item){ }}
-      <p style="box-sizing: border-box;">{{ item }}</p>
-      {{#  }); }}
-      {{#  if(d.contentList.length === 0){ }}
-        无数据
-      {{#  } }}
+      <div class="border">
+        <div class="container">
+          <div class="left-ball"></div>
+          <div class="right-ball"></div>
+        </div>
+        <article>
+          <p class="title">
+            {{# if(d.url === ""){ }}
+              <a style="color: #0000ff" href ="https://baike.baidu.com/item/{{ d.title }}" target="_blank">{{ d.title }}</a>
+            {{# }else{ }}
+              <a style="color: #0000ff" href ="{{ d.url }}" target="_blank">{{ d.title }}</a>
+            {{# } }}
+          </p>
+          <p class="author">{{ d.author }}</p>
+          {{#  layui.each(d.contentList, function(index, item){ }}
+          <p>{{ item }}</p>
+          {{#  }); }}
+          {{#  if(d.contentList.length === 0){ }}
+            无数据
+          {{#  } }}
+        </article>
+      </div>
     </section>
   </script>
 

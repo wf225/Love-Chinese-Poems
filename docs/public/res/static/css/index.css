@@ -33,14 +33,51 @@ body{font-family: Sun; background: #FFF;}
 .main-about .tabJob, .main-about .tabCour{display: block;}
 /*招贤纳士*/
 .main-about .tabJob .content{padding: 0 0 20px 0px; border: 1px solid #e2e2e2; border-top: 4px solid #65d0c5; margin-top: 20px;}
-/* .main-about .tabJob .content:first-child{margin-top: 10px;}
-.main-about .tabJob .content p{line-height: 40px;} */
-.section{display: inline-block;vertical-align: top;background-color: rgba(222, 223, 190, 0.12);width: 100%;box-shadow: rgba(192, 192, 178, 0.41) 0px 0px 5px;padding: 10px;border-width: 0px;border-radius: 6px;border-style: none;border-color: rgb(62, 62, 62);overflow: hidden;box-sizing: border-box;text-align: center;}
+.main-about .tabJob .content:first-child{margin-top: 10px;}
+.main-about .tabJob .content p{line-height: 40px;}
 .main-about .tabJob .content ul{padding-left: 20px; list-style-type: none; counter-reset: sectioncounter;}
 .main-about .tabJob .content ul li{color: #000000; font-size: 22px; line-height: 40px;}
-/* .main-about .tabJob .content ul li:before {content: counter(sectioncounter) "、"; counter-increment: sectioncounter;} */
-/*发展历程*/
-.keysView{font-size: 15px; line-height: 24px; cursor: pointer;}
+
+.section{
+  margin: 20px;
+  display: flex; flex-direction: row; justify-content: center;
+}
+.section .border{
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background-color: rgba(222, 223, 190, 0.12);
+  box-shadow: rgba(192, 192, 178, 0.41) 0px 0px 5px;
+  padding: 10px;
+  border-width: 0px;
+  border-radius: 6px;
+  border-style: none;
+  border-color: rgb(62, 62, 62);
+  overflow: hidden;
+}
+.section .border .container{
+  display: flex; flex-direction: row; justify-content: space-between; width: 100%;
+}
+.section .border .container .left-ball{
+  width: 16px;height: 16px;vertical-align: top;overflow: hidden;background-color: rgb(255, 255, 255);border-radius: 100%;border-width: 0px;border-style: none;border-color: rgb(62, 62, 62);box-shadow: rgba(192, 192, 178, 0.41) 2.89778px 0.776457px 5px inset;
+}
+.section .border .container .right-ball{
+  width: 16px;height: 16px;vertical-align: top;overflow: hidden;background-color: rgb(255, 255, 255);border-radius: 100%;border-width: 0px;border-style: none;border-color: rgb(62, 62, 62);box-shadow: rgba(192, 192, 178, 0.41) -2.86891px 0.877115px 5px inset;
+}
+.section article{
+  margin-top: -20px;
+  font-size: 16px;
+  line-height: 2.0;
+  text-align: center;
+  font-family: "SimSun";
+}
+.section article .title{
+  font-size: 18px; color: rgb(255, 129, 36); font-weight:bold;
+}
+.section article .author{
+  font-size: 14px;
+}
+
 
 @media screen and (max-width: 480px){
   .nav .layui-nav .layui-nav-item{display: none}
