@@ -33,8 +33,6 @@ function viewRender(viewId, templateId, data) {
 }
 
 function render(poem) {
-  poem.contentList = poem.content.split("\n");
-
   viewRender('poem_view', "poemView", poem);
   // index_view
   document.getElementById("index_view").innerHTML = `${index} / ${NUM}`;

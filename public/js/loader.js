@@ -136,6 +136,7 @@ function getTodoList() {
   for (i = POEMS.length - 1; i >= 0; i--) {
     var item = POEMS[i];
     if (item.inProgress) {
+      item.contentList = item.content.split("\n");
       result.push(item);
     } else {
       break;
@@ -151,11 +152,21 @@ function getReviewList(num = undefined) {
   for (i = POEMS.length - 1; i >= 0; i--) {
     var item = POEMS[i];
     if (!item.inProgress) {
+      item.contentList = item.content.split("\n");
       result.push(item);
     }
-    // if (result.length >= num) {
-    //   break;
-    // }
+  }
+  return result.reverse();
+}
+
+// 获取已学习过和正在学习的，进行打印
+function getPrintList(num = undefined) {
+  var result = Array();
+
+  for (i = POEMS.length - 1; i >= 0; i--) {
+    var item = POEMS[i];
+    item.contentList = item.content.split("\n");
+    result.push(item);
   }
   return result.reverse();
 }
