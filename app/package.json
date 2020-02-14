@@ -12,8 +12,9 @@
   },
   "scripts": {
     "build": "node ./server/convertMarkdown.js",
-    "prebuild": "rm -rf ./server/dataSource.json",
+    "prebuild": "rm -rf ./server/data/dataSource.json",
     "start": "node-dev server.js",
+    "compare": "node ./server/compareData.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bill Wu",

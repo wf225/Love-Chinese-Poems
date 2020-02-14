@@ -1,4 +1,3 @@
-var POEMS = 
 [
   {
     "title": "山村咏怀",
@@ -2296,4 +2295,4 @@ var POEMS =
     "url": "",
     "inProgress": true
   }
-];
+]
