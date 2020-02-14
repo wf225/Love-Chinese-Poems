@@ -47,14 +47,14 @@
             {{# } }}
           </p>
           <p class="author">{{ poem.author }}</p>
+          <!-- foreword -->
+          {{#  if(poem.foreword){ }}
+          <p class="foreword">{{ poem.foreword }}</p>
+          {{#  } }}
           <!-- contentList -->
           {{#  layui.each(poem.contentList, function(_index, item){ }}
           <p>{{ item }}</p>
           {{#  }); }}
-          <!-- contentList is empty -->
-          {{#  if(poem.contentList.length === 0){ }}
-            无数据
-          {{#  } }}
         </article>
       </div>
     </section>
