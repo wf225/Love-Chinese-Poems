@@ -79,6 +79,10 @@ body{font-family: Sun; background: #FFF;}
 .section article .author{
   font-size: 16px;
 }
+.section article .foreword{
+  color: gray;
+  font-size: 14px;
+}
 
 
 @media screen and (max-width: 480px){

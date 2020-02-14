@@ -51,6 +51,7 @@ function loadFile(markdownPath) {
       poem = {
         title: "",
         author: "",
+        foreword: "",
         content: "",
         url: "",
         isStart: false,
@@ -64,7 +65,7 @@ function loadFile(markdownPath) {
     }
 
     if (poem !== null && poem.isEnd) {
-      // 删除属性
+      // 删除属性 isStart, isEnd
       delete poem.isStart;
       delete poem.isEnd;
 
@@ -100,6 +101,12 @@ function getPoem(lineData, poem) {
   // 读取作者
   if (lineData.substr(0, 5) === "#### ") {
     poem.author = lineData.substring(5);
+    return;
+  }
+
+  // 读取序言
+  if (lineData.substr(0, 6) === "##### ") {
+    poem.foreword = lineData.substring(6);
     return;
   }
 
