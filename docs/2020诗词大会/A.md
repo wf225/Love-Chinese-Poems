@@ -83,43 +83,251 @@ style: |
 
 ![bg left:37% vertical w:500px](./images/A/3.png)
 
-#### 画鸡
+<!-- #### 画鸡
 ###### 【明】 唐寅
 ```
 头上红冠不用裁，满身雪白走将来。
 平生不敢轻言语，一叫千门万户开。
-```
+``` -->
 
 ---
 #
 
 ![bg left:37% vertical w:500px](./images/A/4.png)
 
-#### 咏柳
+<!-- #### 咏柳
 ###### 【唐】贺知章
 ```
 碧玉妆成一树高，万条垂下绿丝绦。
 不知细叶谁裁出，二月春风似剪刀。
-```
+``` -->
 
 ---
+#
 
 ![bg left:37% vertical w:500px](./images/A/5.png)
 
 ---
+#
 
 ![bg left:37% vertical w:500px](./images/A/6.png)
 
 ---
+#
 
 ![bg left:37% vertical w:500px](./images/A/7.png)
 
 ---
+#
 
 ![bg left:37% vertical w:500px](./images/A/8.png)
 
 ---
+#
 
 ![bg left:37% vertical w:500px](./images/A/9.png)
 
 ---
+#
+
+![bg left:37% vertical w:500px](./images/A/10.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/11.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/12.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/13.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/14.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/15.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/16.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/17.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/18.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/19.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/20.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/21.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/22.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/23.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/24.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/25.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/26.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/27.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/28.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/29.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/30.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/31.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/32.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/33.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/34.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/35.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/36.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/37.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/38.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/39.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/40.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/41.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/42.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/43.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/44.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/45.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/46.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/47.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/48.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/49.png)
+
+---
+#
+
+![bg left:37% vertical w:500px](./images/A/50.png)
