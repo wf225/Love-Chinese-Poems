@@ -1,0 +1,156 @@
+<html>
+<header>
+  <title>H5 touch test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</header>
+
+<body>
+  <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
+    你的浏览器不支持 canvas 元素。
+  </canvas>
+  <br>
+  日志：
+  <pre id="log" style="border: 1px solid #ccc;"></pre>
+  <script>
+    window.onload = function startup() {
+      const el = document.getElementsByTagName("canvas")[0];
+      el.addEventListener("touchstart", handleStart, false);
+      el.addEventListener("touchend", handleEnd, false);
+      el.addEventListener("touchmove", handleMove, false);
+      log("初始化成功。")
+    }
+
+    const ongoingTouches = [];
+
+    //当 touchstart 事件触发时，平面上即出现一个新的触摸点
+    function handleStart(evt) {
+      evt.preventDefault();
+      console.log("触摸开始。");
+      const el = document.getElementsByTagName("canvas")[0];
+      const ctx = el.getContext("2d");
+      const touches = evt.changedTouches;
+
+      for (let i = 0; i < touches.length; i++) {
+        console.log("开始第 " + i + " 个触摸 ...");
+        ongoingTouches.push(copyTouch(touches[i]));
+        const color = colorForTouch(touches[i]);
+        ctx.beginPath();
+        ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);
+        // 在起点画一个圆。
+        ctx.fillStyle = color;
+        ctx.fill();
+        console.log("第 " + i + " 个触摸已开始。");
+      }
+    }
+
+    // 当触摸移动时绘制
+    function handleMove(evt) {
+      evt.preventDefault();
+      const el = document.getElementsByTagName("canvas")[0];
+      const ctx = el.getContext("2d");
+      const touches = evt.changedTouches;
+
+      for (let i = 0; i < touches.length; i++) {
+        const color = colorForTouch(touches[i]);
+        const idx = ongoingTouchIndexById(touches[i].identifier);
+
+        if (idx >= 0) {
+          log("继续第 " + idx + "个触摸。");
+          ctx.beginPath();
+          log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+          ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
+          log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
+          ctx.lineTo(touches[i].pageX, touches[i].pageY);
+          ctx.lineWidth = 4;
+          ctx.strokeStyle = color;
+          ctx.stroke();
+
+          ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // 切换触摸信息
+          console.log(".");
+        } else {
+          log("无法确定下一个触摸点。");
+        }
+      }
+    }
+
+    //触摸结束处理
+    function handleEnd(evt) {
+      evt.preventDefault();
+      log("触摸结束。");
+      const el = document.getElementsByTagName("canvas")[0];
+      const ctx = el.getContext("2d");
+      touches = evt.changedTouches;
+
+      for (let i = 0; i < touches.length; i++) {
+        const color = colorForTouch(touches[i]);
+        const idx = ongoingTouchIndexById(touches[i].identifier);
+
+        if (idx >= 0) {
+          ctx.lineWidth = 4;
+          ctx.fillStyle = color;
+          ctx.beginPath();
+          ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
+          ctx.lineTo(touches[i].pageX, touches[i].pageY);
+          ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);
+          // 在终点画一个正方形
+          ongoingTouches.splice(idx, 1); // 用完后移除
+        } else {
+          log("无法确定要结束哪个触摸点。");
+        }
+      }
+    }
+
+    // 触摸取消处理
+    function handleCancel(evt) {
+      evt.preventDefault();
+      console.log("触摸取消。");
+      const touches = evt.changedTouches;
+
+      for (let i = 0; i < touches.length; i++) {
+        const idx = ongoingTouchIndexById(touches[i].identifier);
+        ongoingTouches.splice(idx, 1); // 用完后移除
+      }
+    }
+
+    // 为每个触摸点选择一个颜色
+    function colorForTouch(touch) {
+      let r = touch.identifier % 16;
+      let g = Math.floor(touch.identifier / 3) % 16;
+      let b = Math.floor(touch.identifier / 7) % 16;
+      r = r.toString(16); // 转换为十六进制字符串
+      g = g.toString(16); // 转换为十六进制字符串
+      b = b.toString(16); // 转换为十六进制字符串
+      const color = "#" + r + g + b;
+      log("identifier " + touch.identifier + " 触摸的颜色为：" + color);
+      return color;
+    }
+
+    // 拷贝触摸对象
+    function copyTouch(touch) {
+      return {
+        identifier: touch.identifier,
+        pageX: touch.pageX,
+        pageY: touch.pageY
+      };
+    }
+
+    // 查找触摸点
+    function ongoingTouchIndexById(idToFind) {
+      for (let i = 0; i < ongoingTouches.length; i++) {
+        const id = ongoingTouches[i].identifier;
+
+        if (id == idToFind) {
+          return i;
+        }
+      }
+      return -1;    // 未找到
+    }
+
+    function log(msg) {
+      const p = document.getElementById('log');
+      p.innerHTML = msg + "\n" + p.innerHTML;
+    }
+  </script>
+</body>
+
+</html>
