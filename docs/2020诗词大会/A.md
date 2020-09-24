@@ -5,7 +5,7 @@ theme: gaia
 _class: lead
 paginate: true
 # footer: "_iABC_ **乐学古诗**"
-backgroundImage: url("./images/ppt-background.png")
+backgroundImage: url("./images/ppt-bg2.png")
 style: |
   section h1 {
     position: absolute;
@@ -13,10 +13,10 @@ style: |
     top: 0px
   }
 ---
-![bg left:50% w:500px](./images/S1/A01/08A.gif)
+![bg left:45% w:400px](./images/02.png)
 
 ## 2020 诗词大会
-#### 选拔赛题目解析
+#### 选拔赛冲刺
 
 ---
 #
@@ -233,8 +233,8 @@ style: |
 纸上得来终觉浅，绝知此事要躬行。
 ```
 
-示：训示、指示。
-子聿(yù)：陆游的小儿子。
+- 示：训示、指示。
+- 子聿(yù)：陆游的小儿子。
 
 ---
 #
